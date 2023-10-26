@@ -26,7 +26,7 @@
       {
         "name": "Project 1",
         "dateYear": "2023",
-        "image": "project1-image.jpg",
+        "image": "https://via.placeholder.com/300x300.png",
         "description": "Description of Project 1",
         "link": "https://project1-link.com",
         "languages": ["JavaScript", "React", "HTML", "CSS"]
@@ -34,7 +34,7 @@
       {
         "name": "Project 2",
         "dateYear": "2022",
-        "image": "project2-image.jpg",
+        "image": "https://via.placeholder.com/300x300.png",
         "description": "Description of Project 2",
         "link": "https://project2-link.com",
         "languages": ["Java", "Spring Boot", "MySQL"]
