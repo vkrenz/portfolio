@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --global-hue: 190;
+    --dark-bg-color: hsl(var(--global-hue), 50%, 15%);
+    --medium-bg-color: hsl(var(--global-hue), 75%, 50%);
+    --light-bg-color: hsl(var(--global-hue), 40%, 75%);
+    --extra-light-bg-color: hsl(var(--global-hue), 30%, 92%);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--extra-light-bg-color);
+}
+
+.dark-bg-color {
+    background-color: var(--dark-bg-color);
+}
+
+.expand-hover:hover {
+    transform: scale(1.05);
+}

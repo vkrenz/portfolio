@@ -1,0 +1,67 @@
+{
+    "name": "Victor Krenzel",
+    "company": "Scotiabank",
+    "description": "I'm a passionate developer with a love for technology, continuous learning, and problem-solving, driven by curiosity and creativity.",
+    "profilePicture": "https://i.imgur.com/udGR1n7.png",
+    "contactInfo": {
+      "username": "vkrenzel",
+      "email": "vkrenzel@outlook.com",
+      "phone": "647-568-6382",
+      "location": "Toronto"
+    },
+    "socials": {
+      "instagram": {
+        "link": "your-instagram-username"
+      },
+      "twitter": {
+        "link": "your-twitter-username"
+      },
+      "linkedin": {
+        "link": "your-linkedin-profile"
+      },
+      "github": {
+        "link": "your-github-username"
+      }
+    },
+    "projects": [
+      {
+        "name": "Project 1",
+        "dateYear": "2023",
+        "image": "project1-image.jpg",
+        "description": "Description of Project 1",
+        "link": "https://project1-link.com",
+        "languages": ["JavaScript", "React", "HTML", "CSS"]
+      },
+      {
+        "name": "Project 2",
+        "dateYear": "2022",
+        "image": "project2-image.jpg",
+        "description": "Description of Project 2",
+        "link": "https://project2-link.com",
+        "languages": ["Java", "Spring Boot", "MySQL"]
+      }
+    ],
+    "skills": [
+      {
+        "name": "JavaScript",
+        "icon": "javascript-icon"
+      },
+      {
+        "name": "React",
+        "icon": "react-icon"
+      },
+      {
+        "name": "HTML",
+        "icon": "html-icon"
+      },
+      {
+        "name": "CSS",
+        "icon": "css-icon"
+      },
+      {
+        "name": "Java",
+        "icon": "java-icon"
+      }
+    ]
+  }
+  
