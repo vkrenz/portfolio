@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-    --global-hue: 190;
+    --global-hue: 190; /** default 190 */
     --dark-bg-color: hsl(var(--global-hue), 50%, 15%);
     --medium-bg-color: hsl(var(--global-hue), 75%, 50%);
     --light-bg-color: hsl(var(--global-hue), 40%, 75%);

@@ -7,6 +7,7 @@ import {
     PiInstagramLogoDuotone,
     PiGithubLogoDuotone,
     PiLinkedinLogoDuotone,
+    PiCodepenLogoDuotone,
 } from 'react-icons/pi'
 
 const AboutCard = () => {
@@ -25,7 +26,7 @@ const AboutCard = () => {
         <div>
             <div className="font-bold mb-5 ms-7 text-center lg:text-left text-base">About</div>
             <div className="flex md:flex-row flex-col gap-7">
-                <div className="bg-white p-7 rounded-3xl w-full md:w-1/2 lg:w-2/3"> {/** Left Column */}
+                <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
                     <div className="flex">
                         <div className="w-full flex flex-col gap-8">
                             <div className="text-neutral-400 uppercase font-semibold">
@@ -54,7 +55,7 @@ const AboutCard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 lg:w-1/3 bg-white p-7 rounded-3xl flex flex-col gap-3"> {/** Right Column */}
+                <div className="w-full lg:w-1/2 bg-white p-7 rounded-3xl flex flex-col gap-3"> {/** Right Column */}
                     <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold">
                         <LiaLinkSolid className="h-5 w-5" />
                         Socials
@@ -69,6 +70,10 @@ const AboutCard = () => {
                                 <PiTwitterLogoDuotone />
                                 <span className="text-xs mt-3">Twitter</span>
                             </div>
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                                <PiCodepenLogoDuotone />
+                                <span className="text-xs mt-3">Codepen</span>
+                            </div>
                         </div>
                         <div className="flex gap-3 h-full w-full">
                             <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
@@ -78,6 +83,10 @@ const AboutCard = () => {
                             <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
                                 <PiLinkedinLogoDuotone />
                                 <span className="text-xs mt-3">LinkedIn</span>
+                            </div>
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                                <PiLinkedinLogoDuotone />
+                                <span className="text-xs mt-3">Replit</span>
                             </div>
                         </div>
                     </div>

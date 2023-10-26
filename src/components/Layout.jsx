@@ -9,12 +9,12 @@ const Layout = ({ children }) => {
         'work', 
         'resume', 
         'blog', 
-        'contact'
+        'contact',
       ];
 
 
   return (
-    <div className="container mx-auto px-16 lg:p-8 max-w-full lg:max-w-5xl">
+    <div className="container mx-auto px-8 max-w-full lg:max-w-5xl">
       <NavbarComponent options={navOptions} />
       {/* Main content area */}
       <main>{children}</main>
