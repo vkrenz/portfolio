@@ -8,7 +8,9 @@ import {
     PiGithubLogoDuotone,
     PiLinkedinLogoDuotone,
     PiCodepenLogoDuotone,
-    PiWhatsappLogoDuotone
+    PiWhatsappLogoDuotone,
+    PiSuitcaseDuotone,
+    PiMapPinLineDuotone,
 } from 'react-icons/pi'
 
 const AboutCard = () => {
@@ -30,9 +32,22 @@ const AboutCard = () => {
                 <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
                     <div className="flex">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left">
-                            <div className="text-neutral-400 uppercase font-semibold">
+                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center">
                                 {/* {contactInfo.username} */}
-                                📍 {contactInfo.location}
+                                <>
+                                    <PiMapPinLineDuotone className="w-5 h-5" />
+                                </>
+                                <>
+                                    {contactInfo.location}
+                                </>
+                            </div>
+                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center">
+                                <>
+                                    <PiSuitcaseDuotone className="w-5 h-5" />
+                                </>
+                                <>
+                                    {company}
+                                </>
                             </div>
                             <div className="text-2xl font-bold dark-text-color">
                                 Hey, I&apos;m {name.split(" ")[0]}! 👋
