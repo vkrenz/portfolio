@@ -24,17 +24,17 @@ const AboutCard = () => {
 
     return (
         <div>
-            <div className="font-bold mb-5 ms-7 text-center lg:text-left text-base">About</div>
+            <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-base">About Me</div>
             <div className="flex md:flex-row flex-col gap-7">
                 <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
                     <div className="flex">
-                        <div className="w-full flex flex-col gap-8">
+                        <div className="w-full flex flex-col gap-7">
                             <div className="text-neutral-400 uppercase font-semibold">
                                 {/* {contactInfo.username} */}
                                 📍 {contactInfo.location}
                             </div>
                             <div className="text-2xl font-bold">
-                                Hey, I&apos;m {name.split(" ")[0]} 👋
+                                Hey, I&apos;m {name.split(" ")[0]}! 👋
                             </div>
                             <div className="text-lg text-neutral-800">
                                 <p
@@ -56,7 +56,7 @@ const AboutCard = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 bg-white p-7 rounded-3xl flex flex-col gap-3"> {/** Right Column */}
-                    <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold">
+                    <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold mb-5">
                         <LiaLinkSolid className="h-5 w-5" />
                         Socials
                     </div>
@@ -90,7 +90,6 @@ const AboutCard = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
