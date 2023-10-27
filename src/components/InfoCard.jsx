@@ -32,7 +32,7 @@ const AboutCard = () => {
                 <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
                     <div className="flex">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left">
-                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center">
+                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center justify-center md:justify-start">
                                 {/* {contactInfo.username} */}
                                 <>
                                     <PiMapPinLineDuotone className="w-5 h-5" />
@@ -41,14 +41,14 @@ const AboutCard = () => {
                                     {contactInfo.location}
                                 </>
                             </div>
-                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center">
+                            {/* <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center">
                                 <>
                                     <PiSuitcaseDuotone className="w-5 h-5" />
                                 </>
                                 <>
                                     {company}
                                 </>
-                            </div>
+                            </div> */}
                             <div className="text-2xl font-bold dark-text-color">
                                 Hey, I&apos;m {name.split(" ")[0]}! 👋
                             </div>
@@ -72,37 +72,37 @@ const AboutCard = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 bg-white p-7 rounded-3xl flex flex-col gap-3"> {/** Right Column */}
-                    <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold mb-5">
+                    <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold mb-5 justify-center md:justify-start">
                         <LiaLinkSolid className="h-5 w-5" />
                         Socials
                     </div>
                     <div className="flex flex-col gap-3 h-full md:justify-around w-full">
                         <div className="flex gap-3 h-full w-full">
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
                                 <PiGithubLogoDuotone />
-                                <span className="text-xs mt-3">Github</span>
+                                {/* <span className="text-xs mt-3">Github</span> */}
                             </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
                                 <PiTwitterLogoDuotone />
-                                <span className="text-xs mt-3">Twitter</span>
+                                {/* <span className="text-xs mt-3">Twitter</span> */}
                             </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
                                 <PiCodepenLogoDuotone />
-                                <span className="text-xs mt-3">Codepen</span>
+                                {/* <span className="text-xs mt-3">Codepen</span> */}
                             </div>
                         </div>
                         <div className="flex gap-3 h-full w-full">
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
                                 <PiInstagramLogoDuotone />
-                                <span className="text-xs mt-3">Instagram</span>
+                                {/* <span className="text-xs mt-3">Instagram</span> */}
                             </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
                                 <PiLinkedinLogoDuotone />
-                                <span className="text-xs mt-3">LinkedIn</span>
+                                {/* <span className="text-xs mt-3">LinkedIn</span> */}
                             </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
+                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
                                 <PiWhatsappLogoDuotone />
-                                <span className="text-xs mt-3">Whatsapp</span>
+                                {/* <span className="text-xs mt-3">Whatsapp</span> */}
                             </div>
                         </div>
                     </div>
