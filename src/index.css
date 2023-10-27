@@ -25,6 +25,18 @@ body {
     background-color: var(--dark-bg-color);
 }
 
+.medium-bg-color {
+    background-color: var(--medium-bg-color);
+}
+
+.light-bg-color {
+    background-color: var(--light-bg-color);
+}
+
+.extra-light-bg-color {
+    background-color: var(--extra-light-bg-color);
+}
+
 .expand-hover:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;

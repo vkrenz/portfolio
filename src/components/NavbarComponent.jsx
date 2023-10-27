@@ -42,7 +42,7 @@ const NavbarComponent = ({
     ))
 
     return (
-        <div className="flex gap-3 mb-[100px] mt-10">
+        <div className="flex gap-3 mb-14 mt-10">
             <Navbar class="bg-white p-3 rounded-2xl lg:rounded-full w-full flex justify-center" rounded>
                 {/* <Navbar.Brand href="https://flowbite-react.com">
                     <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
