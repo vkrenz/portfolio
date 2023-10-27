@@ -24,12 +24,18 @@
     },
     "projects": [
       {
-        "name": "Project 1",
+        "name": "Airbnb Clone",
         "dateYear": "2023",
-        "image": "https://via.placeholder.com/300x300.png",
-        "description": "Description of Project 1",
+        "image": "https://i.imgur.com/l5s5dGb.png",
+        "description": "A feature-rich Airbnb clone showcasing CRUD, user authentication, search filters, interactive maps, and efficient media management, highlighting my expertise in building innovative web applications.",
         "link": "https://project1-link.com",
-        "languages": ["JavaScript", "React", "HTML", "CSS"]
+        "languages": [
+          "Typescript", 
+          "Next.js 13", 
+          "React", 
+          "MongoDB", 
+          "TailwindCSS"
+        ]
       },
       {
         "name": "Project 2",

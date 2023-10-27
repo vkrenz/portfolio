@@ -17,11 +17,30 @@ const WorkCard = () => {
         skills,
     } = data
 
-    const languagesArr = ["JavaScript", "React", "HTML", "CSS"]
-
-    const languages = languagesArr.map((language, index) => (
+    const projectsComponent = projects.map((project, index) => (
         <>
-            <div key={index} className="capitalize font-semibold text-base px-4 py-2 rounded-full extra-light-bg-color">{language}</div>
+            <div key={index} className="flex flex-col w-full mt-5"> {/** Projects Container */}
+                <div className="flex flex-col gap-3">
+                    <div className="flex lg:gap-7">
+                        <img src={project.image} alt="Project 1" className="rounded-2xl w-0 lg:w-24 lg:max-h-24 md:visible" />
+                        <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
+                            <div className="font-semibold text-md"><span className="text-neutral-400">{project.dateYear} &middot;</span> {project.name}</div>
+                            <p className="text-md">{project.description}</p> 
+                            {/* <a href="#" className="font-semibold">Learn More</a> */}
+                        </div>
+                    </div>
+                    <div className="flex items-start flex-wrap gap-3 mt-3 mb-3">
+                        {
+                            project.languages.map((language, index) => (
+                                <>
+                                    <div key={index} className="capitalize font-semibold text-base px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap">{language}</div>
+                                </>
+                            ))
+                        }
+                    </div>
+                    <hr />
+                </div>
+            </div>
         </>
     ))
 
@@ -33,36 +52,7 @@ const WorkCard = () => {
                     <PiCodeDuotone className="h-5 w-5" />
                     Projects
                 </div>
-                <div className="flex flex-col w-full mt-5"> {/** Projects Container */}
-                    <div className="flex flex-col gap-3">
-                        <div className="flex lg:gap-7">
-                            <img src={projects[0].image} alt="Project 1" className="rounded-2xl w-0 lg:w-24 lg:max-h-24 md:visible" />
-                            <div className="w-full flex flex-col gap-3 lg:max-h-24">
-                                <div className="font-semibold text-base">Project Title</div>
-                                <p className="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur vitae magnam numquam dolore unde perferendis assumenda incidunt molestiae ipsam explicabo libero quis non ratione et, fugiat, accusamus enim laborum eos.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 mt-3 mb-3">
-                            {languages}
-                        </div>
-                        <hr />
-                    </div>
-                </div>
-                <div className="flex flex-col w-full mt-5"> {/** Projects Container */}
-                    <div className="flex flex-col gap-3">
-                        <div className="flex lg:gap-7">
-                            <img src={projects[0].image} alt="Project 1" className="rounded-2xl w-0 lg:w-24 lg:max-h-24 md:visible" />
-                            <div className="w-full flex flex-col gap-3 lg:max-h-24">
-                                <div className="font-semibold text-base">Project Title</div>
-                                <p className="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur vitae magnam numquam dolore unde perferendis assumenda incidunt molestiae ipsam explicabo libero quis non ratione et, fugiat, accusamus enim laborum eos.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 mt-3 mb-3">
-                            {languages}
-                        </div>
-                        <hr />
-                    </div>
-                </div>
+                {projectsComponent}
                 <Button className="expand-hover dark-bg-color w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto">
                     <p className="uppercase">
                         View All
