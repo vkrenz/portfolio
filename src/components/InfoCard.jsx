@@ -29,12 +29,12 @@ const AboutCard = () => {
             <div className="flex md:flex-row flex-col gap-7">
                 <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
                     <div className="flex">
-                        <div className="w-full flex flex-col gap-7">
+                        <div className="w-full flex flex-col gap-7 text-center lg:text-left">
                             <div className="text-neutral-400 uppercase font-semibold">
                                 {/* {contactInfo.username} */}
                                 📍 {contactInfo.location}
                             </div>
-                            <div className="text-2xl font-bold">
+                            <div className="text-2xl font-bold dark-text-color">
                                 Hey, I&apos;m {name.split(" ")[0]}! 👋
                             </div>
                             <div className="text-lg text-neutral-800">
@@ -44,7 +44,7 @@ const AboutCard = () => {
                                     }}
                                 />
                             </div>
-                            <Button className="expand-hover dark-bg-color w-52 p-2 rounded-2xl shadow-lg">
+                            <Button className="expand-hover dark-bg-color w-full lg:w-52 p-2 rounded-2xl shadow-lg">
                                 <p className="uppercase">
                                     More About Me
                                 </p>
