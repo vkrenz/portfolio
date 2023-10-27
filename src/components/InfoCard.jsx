@@ -8,6 +8,7 @@ import {
     PiGithubLogoDuotone,
     PiLinkedinLogoDuotone,
     PiCodepenLogoDuotone,
+    PiWhatsappLogoDuotone
 } from 'react-icons/pi'
 
 const AboutCard = () => {
@@ -85,8 +86,8 @@ const AboutCard = () => {
                                 <span className="text-xs mt-3">LinkedIn</span>
                             </div>
                             <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-4">
-                                <PiLinkedinLogoDuotone />
-                                <span className="text-xs mt-3">Replit</span>
+                                <PiWhatsappLogoDuotone />
+                                <span className="text-xs mt-3">Whatsapp</span>
                             </div>
                         </div>
                     </div>
