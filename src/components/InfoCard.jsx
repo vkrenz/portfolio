@@ -1,5 +1,7 @@
 import data from '../myData.json'
+
 import { Button } from 'flowbite-react';
+
 import { BsArrowRight } from 'react-icons/bs'
 import { LiaLinkSolid } from 'react-icons/lia'
 import { 
@@ -9,7 +11,7 @@ import {
     PiLinkedinLogoDuotone,
     PiCodepenLogoDuotone,
     PiWhatsappLogoDuotone,
-    PiSuitcaseDuotone,
+    // PiSuitcaseDuotone,
     PiMapPinLineDuotone,
 } from 'react-icons/pi'
 

@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
 
 import NavbarComponent from './NavbarComponent';
 
 const Layout = ({ children }) => {
-
 
   const navOptions = [
       'home',
@@ -14,7 +12,6 @@ const Layout = ({ children }) => {
       'blog', 
       'contact',
     ];
-
 
   return (
     <div className="container mx-auto px-8 w-full lg:max-w-5xl">

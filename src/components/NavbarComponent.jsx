@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Navbar } from 'flowbite-react';
-import { useLocation } from 'react-router-dom'
+
 import { PiLightbulbFilamentDuotone } from 'react-icons/pi'
+import { useLocation } from 'react-router-dom'
+import { Navbar } from 'flowbite-react';
+
+import PropTypes from 'prop-types';
 
 const NavbarComponent = ({
     options
