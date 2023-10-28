@@ -75,7 +75,7 @@ const NavbarComponent = ({
                     </div>
                 </div>
             </Navbar>
-            <div className="expand-hover cursor-pointer h-16 lg:h-14 w-16 lg:w-14 bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
+            <div className="expand-hover cursor-pointer h-16 lg:h-14 w-16 lg:w-[61px] bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
                 <PiLightbulbFilamentDuotone />
             </div>
         </div>
