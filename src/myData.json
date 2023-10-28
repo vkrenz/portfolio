@@ -38,18 +38,6 @@
         ]
       },
       {
-        "name": "EssentiaMarket",
-        "dateYear": "2023",
-        "image": "https://via.placeholder.com/300x300.png",
-        "description": "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",
-        "link": "https://project2-link.com",
-        "languages": [
-          "React", 
-          "Next.js 13", 
-          "Bootstrap"
-        ]
-      },
-      {
         "name": "Chatalot",
         "dateYear": "2022",
         "image": "https://via.placeholder.com/300x300.png",
@@ -59,6 +47,18 @@
           "React", 
           "Tailwind CSS", 
           "Firebase"
+        ]
+      },
+      {
+        "name": "EssentiaMarket",
+        "dateYear": "2023",
+        "image": "https://via.placeholder.com/300x300.png",
+        "description": "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",
+        "link": "https://project2-link.com",
+        "languages": [
+          "React", 
+          "Next.js 13", 
+          "Bootstrap"
         ]
       }
     ],

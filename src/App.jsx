@@ -3,8 +3,6 @@ import WorkCard from './components/WorkCard'
 
 function App() {
 
-
-
   return (
     <>
       <AboutCard />

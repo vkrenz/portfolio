@@ -42,8 +42,8 @@ const WorkCard = () => {
 
     const imageIcons = [
         <TbBrandAirbnb />,
-        <GiClothes />,
         <PiChatCenteredTextDuotone />,
+        <GiClothes />,
     ]
 
     const projectsComponent = projects.map((project, index) => (

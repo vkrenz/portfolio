@@ -43,7 +43,7 @@ body {
 
 .expand-hover:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 @keyframes flip {
@@ -51,11 +51,11 @@ body {
         transform: translateY(0) rotateX(0deg);
     }
     50% {
-        transform: translateY(-10px) rotateX(360deg);
+        transform: translateY(-10px) rotateX(180deg);
     }
 }
   
   
 .animate-bounce-custom {
-    animation: flip 0.5s linear; /* Adjust the duration (2s) as needed */
+    animation: flip 0.35s linear; /* Adjust the duration (2s) as needed */
 }
