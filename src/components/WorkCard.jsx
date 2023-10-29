@@ -55,7 +55,7 @@ const WorkCard = () => {
                         <div className="flex lg:gap-7">
                             {/* <img src={project.image} alt="Project 1" className="rounded-2xl w-0 lg:w-24 lg:max-h-24 md:visible" /> */}
                             <div className="rounded-2xl w-0 lg:w-28 lg:h-24 md:visible flex items-center justify-center dark-bg-color expand-hover">
-                                <div key={index} className="text-5xl text-white shadow-lg">{imageIcons[index]}</div>
+                                <div key={index} className="text-5xl text-white lg:shadow-lg">{imageIcons[index]}</div>
                             </div>
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
                                 <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center">
