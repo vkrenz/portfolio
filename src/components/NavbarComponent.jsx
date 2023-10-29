@@ -54,7 +54,7 @@ const NavbarComponent = ({
                 <Navbar.Collapse className="md:ms-4">
                     {navOptions}
                 </Navbar.Collapse>
-                <div className="flex gap-5 mx-auto lg:float-right mt-1 me-2">
+                <div className="flex gap-5 mx-auto sm:float-right mt-2 me-2 ms-2">
                     <div className={`${activeHue === 190 ? 'animate-bounce-custom border-2 border-neutral-400 rounded-full w-6 h-6 flex items-center justify-center' : ''}`}>
                         <button 
                             className={`expand-hover bg-sky-100 ${activeHue === 190 ? 'w-4 h-4' : 'w-6 h-6'} rounded-full border border-neutral-400`}
@@ -75,7 +75,7 @@ const NavbarComponent = ({
                     </div>
                 </div>
             </Navbar>
-            <div className="expand-hover cursor-pointer h-16 lg:h-14 w-16 lg:w-[61px] bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
+            <div className="expand-hover cursor-pointer h-16 sm:h-24 lg:h-14 w-24 md:w-[61px] bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
                 <PiLightbulbFilamentDuotone />
             </div>
         </div>
