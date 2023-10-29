@@ -29,12 +29,12 @@ const AboutCard = () => {
 
     return (
         <div>
-            <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-base">About Me</div>
+            <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base">About Me</div>
             <div className="flex md:flex-row flex-col gap-7">
                 <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
                     <div className="flex">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left">
-                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center justify-center md:justify-start">
+                            <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base">
                                 {/* {contactInfo.username} */}
                                 <>
                                     <PiMapPinLineDuotone className="w-5 h-5" />
@@ -51,10 +51,10 @@ const AboutCard = () => {
                                     {company}
                                 </>
                             </div> */}
-                            <div className="text-2xl font-bold dark-text-color">
+                            <div className="md:text-2xl font-bold dark-text-color text-lg">
                                 Hey, I&apos;m {name.split(" ")[0]}! 👋
                             </div>
-                            <div className="text-lg text-neutral-800">
+                            <div className="text-sm md:text-md text-neutral-800">
                                 <p
                                     dangerouslySetInnerHTML={{
                                     __html: description,
@@ -74,7 +74,7 @@ const AboutCard = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 bg-white p-7 rounded-3xl flex flex-col gap-3"> {/** Right Column */}
-                    <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold mb-5 justify-center md:justify-start">
+                    <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold mb-5 justify-center md:justify-start text-base">
                         <LiaLinkSolid className="h-5 w-5" />
                         Socials
                     </div>

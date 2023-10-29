@@ -82,7 +82,7 @@ const WorkCard = () => {
                                         ))
                                     }
                                 </div>
-                                <p className="text-md">{project.description}</p> 
+                                <p className="text-sm md:text-md">{project.description}</p> 
                                 {/* <a href="#" className="font-semibold">Learn More</a> */}
                             </div>
                         </div>
@@ -102,7 +102,7 @@ const WorkCard = () => {
 
     return (
         <div className="mb-14">
-            <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-base mt-14">My Work</div>
+            <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base mt-14">My Work</div>
             <div className="bg-white p-7 rounded-3xl w-full">
                 <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold">
                     <PiCodeDuotone className="h-5 w-5" />
