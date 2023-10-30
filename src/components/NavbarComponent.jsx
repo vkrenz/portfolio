@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react';
-
-import { PiLightbulbFilamentDuotone } from 'react-icons/pi'
+import { Link } from 'react-router-dom';
+import { PiLightbulbFilamentDuotone, PiMoonStarsDuotone } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
 import { Navbar } from 'flowbite-react';
 
@@ -30,17 +30,17 @@ const NavbarComponent = ({
     };
 
     const navOptions = options.map((option, index) => (
-        <Navbar.Link 
+        <Link 
+            to={`/${option}`} 
             key={index} 
-            href={`/${option}`} 
             className={`
-                capitalize
-                text-base
-                ${pathname === `/${option}` ? 'font-bold' : ''}
-        `}
+                capitalize 
+                text-base 
+                ${pathname === `/${option}` ? 'font-semibold dark-text-color' : ''}
+            `}
         >
-                    {option}
-        </Navbar.Link>
+            {option}
+        </Link>
     ))
 
     return (
@@ -75,8 +75,8 @@ const NavbarComponent = ({
                     </div>
                 </div>
             </Navbar>
-            <div className="expand-hover cursor-pointer h-16 sm:h-24 lg:h-14 w-24 md:w-[61px] bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
-                <PiLightbulbFilamentDuotone />
+            <div className="expand-hover cursor-pointer h-auto w-1/3 md:w-28 bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
+                <PiMoonStarsDuotone />
             </div>
         </div>
     );

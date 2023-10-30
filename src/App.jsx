@@ -1,13 +1,9 @@
-import AboutCard from './components/InfoCard'
-import WorkCard from './components/WorkCard'
+import Home from "./pages/Home"
 
 function App() {
 
   return (
-    <>
-      <AboutCard />
-      <WorkCard />
-    </>
+    <Home />
   )
 }
 
