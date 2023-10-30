@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PiLightbulbFilamentDuotone, PiMoonStarsDuotone } from 'react-icons/pi'
+import { PiMoonStarsDuotone } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
 import { Navbar } from 'flowbite-react';
 

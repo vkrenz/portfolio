@@ -18,7 +18,7 @@
 
 body {
     background-color: var(--extra-light-bg-color);
-    transition: all ease-in-out 1.5s;
+    transition: all ease-in-out 2s;
 }
 
 .dark-bg-color {
