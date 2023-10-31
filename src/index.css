@@ -7,8 +7,8 @@
 :root {
     --global-hue: 190; /** default 190 */
     --dark-bg-color: hsl(var(--global-hue), 50%, 15%);
-    --medium-bg-color: hsl(var(--global-hue), 75%, 50%);
-    --light-bg-color: hsl(var(--global-hue), 40%, 75%);
+    --medium-bg-color: hsl(var(--global-hue), 50%, 50%);
+    --light-bg-color: hsl(var(--global-hue), 50%, 75%);
     --extra-light-bg-color: hsl(var(--global-hue), 30%, 90%);
     --global-font: 'Montserrat', sans-serif;
 }

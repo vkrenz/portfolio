@@ -9,7 +9,7 @@ import { PiCodeDuotone } from 'react-icons/pi'
 import { useDarkMode } from '../DarkModeContext';
 
 const WorkCard = ({
-    displayProjects = 2
+    displayProjects = data.projects.length
 }) => {
     const {
         projects,
