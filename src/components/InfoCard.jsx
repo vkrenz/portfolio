@@ -30,7 +30,7 @@ const AboutCard = () => {
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base">About Me</div>
             <div className="flex md:flex-row flex-col gap-7">
                 <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
-                    <div className="flex h-full">
+                    <div className="flex h-full ">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between">
                             <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base">
                                     <PiMapPinLineDuotone className="w-5 h-5" />

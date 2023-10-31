@@ -2,14 +2,15 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PiMoonStarsDuotone } from 'react-icons/pi'
+import { PiMoonStarsDuotone, PiSunHorizonDuotone } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
 import { Navbar } from 'flowbite-react';
 
 import PropTypes from 'prop-types';
 
 const NavbarComponent = ({
-    options
+    isDarkMode,
+    toggleDarkMode,
 }) => {
     function useRouter() {
         const location = useLocation();
@@ -21,6 +22,15 @@ const NavbarComponent = ({
     }
 
     const { pathname } = useRouter();
+
+    const options = [
+        'home',
+        'about', 
+        'work', 
+        'resume', 
+        'blog', 
+        'contact',
+    ];
 
     const [activeHue, setActiveHue] = useState(190); // State variable to store the active hue
 
@@ -36,7 +46,7 @@ const NavbarComponent = ({
             className={`
                 capitalize 
                 text-base 
-                ${pathname === `/${option}` ? 'font-semibold dark-text-color' : ''}
+                ${pathname === `/${option}` ? `font-semibold ${isDarkMode? 'light-text-color' : 'dark-text-color'}` : ''}
             `}
         >
             {option}
@@ -45,11 +55,7 @@ const NavbarComponent = ({
 
     return (
         <div className="flex gap-3 mb-14 mt-10">
-            <Navbar className="bg-white p-3 rounded-2xl lg:rounded-full w-full flex justify-center" rounded>
-                {/* <Navbar.Brand href="https://flowbite-react.com">
-                    <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-                </Navbar.Brand> */}
+            <Navbar className={`${isDarkMode ? 'bg-neutral-500' : 'bg-white'} p-3 rounded-2xl lg:rounded-full w-full flex justify-center`} rounded>
                 <Navbar.Toggle className="me-auto"/>
                 <Navbar.Collapse className="md:ms-4">
                     {navOptions}
@@ -75,15 +81,19 @@ const NavbarComponent = ({
                     </div>
                 </div>
             </Navbar>
-            <div className="expand-hover cursor-pointer h-auto w-1/3 md:w-28 bg-white rounded-2xl lg:rounded-full flex items-center justify-center text-2xl">
-                <PiMoonStarsDuotone />
+            <div 
+                className={`expand-hover cursor-pointer h-auto w-1/3 md:w-28 ${isDarkMode ? 'bg-neutral-500' : 'bg-white'} rounded-2xl lg:rounded-full flex items-center justify-center text-2xl`}
+                onClick={toggleDarkMode}
+            >
+                {isDarkMode ? <PiSunHorizonDuotone /> : <PiMoonStarsDuotone />}
             </div>
         </div>
     );
 }
 
 NavbarComponent.propTypes = {
-    options: PropTypes.node.isRequired,
+    isDarkMode: PropTypes.node.isRequired,
+    toggleDarkMode: PropTypes.node.isRequired,
   };
  
 export default NavbarComponent;
