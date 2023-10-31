@@ -6,15 +6,21 @@ import { Button } from 'flowbite-react';
 import { BsArrowRight } from 'react-icons/bs'
 import { PiCodeDuotone } from 'react-icons/pi'
 
-const WorkCard = () => {
+import { useDarkMode } from '../DarkModeContext';
+
+const WorkCard = ({
+    displayProjects = 2
+}) => {
     const {
         projects,
     } = data
 
+    const { isDarkMode } = useDarkMode()
+
     const projectsComponent = projects.map((project, index) => (
-        <>
+        <div key={index}>
             {/* Display only the first 2 projects (index <= 1) */}
-            {index <= 1 && (
+            {index <= displayProjects - 1 && (
                 <div key={index} className="flex flex-col w-full mt-5"> {/** Projects Container */}
                     <div className="flex flex-col gap-3">
                         <div className="flex lg:gap-7">
@@ -33,17 +39,7 @@ const WorkCard = () => {
                                         </span>
                                         </div>
                                     </div>
-                                    {/* {
-                                        project.headerIcons?.map((project, index) => (
-                                            <div key={index} className="flex gap-3 text-2xl">
-                                                {
-                                                    project.icons.map((icon, iconIndex) => {
-                                                        <div key={iconIndex}>{icon.icon}</div>
-                                                    })
-                                                }
-                                            </div>
-                                        ))
-                                    } */}
+
                                 </div>
                                 <p className="text-sm md:text-md">{project.description} <a href={`/project/${project.name}`} className="dark-text-color font-semibold">Learn More</a></p> 
                             </div>
@@ -59,13 +55,13 @@ const WorkCard = () => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     ))
 
     return (
         <div className="mb-14">
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base mt-14">My Work</div>
-            <div className="bg-white p-7 rounded-3xl w-full">
+            <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full`}>
                 <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold">
                     <PiCodeDuotone className="h-5 w-5" />
                     Projects

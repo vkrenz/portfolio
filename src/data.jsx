@@ -55,7 +55,7 @@ const data = {
         },
         {
             name: "Discord",
-            link: "mailto:vkrenzel@outlook.com",
+            link: "https://discord.com",
             icon: <PiDiscordLogoDuotone />,
             handle: "osaprocky",
         },

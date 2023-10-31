@@ -5,12 +5,16 @@ import App from './App.jsx'
 import './index.css'
 import Layout from './components/Layout.jsx'
 
+import { DarkModeProvider } from './DarkModeContext';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-      <Layout>
-        <App />
-      </Layout>
+      <DarkModeProvider>
+        <Layout>
+            <App />
+        </Layout>
+      </DarkModeProvider>
     </Router>
   </React.StrictMode>,
 )

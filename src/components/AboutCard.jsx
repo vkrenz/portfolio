@@ -6,7 +6,13 @@ import { BsArrowRight } from 'react-icons/bs'
 import { LiaLinkSolid } from 'react-icons/lia'
 import { PiMapPinLineDuotone } from 'react-icons/pi'
 
-const AboutCard = () => {
+import { useDarkMode } from '../DarkModeContext';
+
+const AboutCard = (
+        // {
+        //     isDarkMode
+        // }
+) => {
     const {
         name,
         description,
@@ -14,6 +20,8 @@ const AboutCard = () => {
         contact,
         socials,
     } = data
+
+    const { isDarkMode } = useDarkMode()
     
     const splitSocials = (arr, size = 3) => {
         const split = []
@@ -29,7 +37,7 @@ const AboutCard = () => {
         <div>
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base">About Me</div>
             <div className="flex md:flex-row flex-col gap-7">
-                <div className="bg-white p-7 rounded-3xl w-full lg:w-1/2"> {/** Left Column */}
+                <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full lg:w-1/2`}> {/** Left Column */}
                     <div className="flex h-full ">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between">
                             <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base">
@@ -58,7 +66,7 @@ const AboutCard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/2 bg-white p-7 rounded-3xl flex flex-col gap-3"> {/** Right Column */}
+                <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
                     <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold mb-5 justify-center md:justify-start text-base">
                         <LiaLinkSolid className="h-5 w-5" />
                         Socials

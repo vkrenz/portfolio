@@ -6,12 +6,18 @@ import { PiMoonStarsDuotone, PiSunHorizonDuotone } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
 import { Navbar } from 'flowbite-react';
 
-import PropTypes from 'prop-types';
+import { useDarkMode } from '../DarkModeContext';
 
-const NavbarComponent = ({
-    isDarkMode,
-    toggleDarkMode,
-}) => {
+const NavbarComponent = (
+    // {
+    //     isDarkMode,
+    //     toggleDarkMode,
+    // }
+) => {
+    const { isDarkMode, toggleDarkMode } = useDarkMode()
+
+    console.info(`(NavbarComponent.jsx): Dark Mode: ${isDarkMode}`)
+
     const [activeHue, setActiveHue] = useState(190); // State variable to store the active hue
 
     function useRouter() {
@@ -132,7 +138,7 @@ const NavbarComponent = ({
             </Navbar>
             <div 
                 className={`
-                    ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 
+                    ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
                     expand-hover 
                     cursor-pointer 
                     h-auto w-1/3 
@@ -145,15 +151,15 @@ const NavbarComponent = ({
                 `}
                 onClick={toggleDarkMode}
             >
-                {isDarkMode ? <PiSunHorizonDuotone /> : <PiMoonStarsDuotone />}
+                {isDarkMode ? <PiSunHorizonDuotone className="text-white" /> : <PiMoonStarsDuotone className="text-neutral-500"/>}
             </div>
         </div>
     );
 }
 
-NavbarComponent.propTypes = {
-    isDarkMode: PropTypes.node.isRequired,
-    toggleDarkMode: PropTypes.node.isRequired,
-  };
+// NavbarComponent.propTypes = {
+//     isDarkMode: PropTypes.node.isRequired,
+//     toggleDarkMode: PropTypes.node.isRequired,
+//   };
  
 export default NavbarComponent;

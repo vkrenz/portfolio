@@ -1,11 +1,11 @@
-import AboutCard from '../components/InfoCard'
+import AboutCard from '../components/AboutCard'
 import WorkCard from '../components/WorkCard'
 
 const Home = () => {
     return (
         <>
             <AboutCard />
-            <WorkCard />
+            <WorkCard displayProjects={2} />
         </>
     );
 }
