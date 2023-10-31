@@ -55,7 +55,7 @@ const NavbarComponent = () => {
             key={opt.hue}
             className={`${
                 activeHue === opt.hue
-                    ? `animate-bounce-custom border-2 ${isDarkMode ? 'border-neutral-100' : 'border-neutral-400'} rounded-full w-6 h-6 flex items-center justify-center`
+                    ? `animate-bounce-custom transition border-2 ${isDarkMode ? 'border-neutral-100' : 'border-neutral-400'} rounded-full w-6 h-6 flex items-center justify-center`
                     : ''
             }`}
         >
@@ -64,6 +64,7 @@ const NavbarComponent = () => {
                 className={`
                     ${activeHue === opt.hue ? 'w-4 h-4' : 'w-6 h-6'}
                     ${opt.bgColor}
+                    transition
                     expand-hover
                     rounded-full
                     border
@@ -116,6 +117,7 @@ const NavbarComponent = () => {
             <div 
                 className={`
                     ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
+                    transition
                     expand-hover 
                     cursor-pointer 
                     h-auto w-1/3 

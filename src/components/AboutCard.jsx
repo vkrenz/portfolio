@@ -28,11 +28,12 @@ const AboutCard = () => {
                 "a Teller",
                 `${name.split(" ")[0]}! 👋`
             ],
-            startDelay: 300,
+            startDelay: 500,
             typeSpeed: 100,
             backSpeed: 100,
             backDelay: 100,
-            showCursor: false,
+            showCursor: true,
+            smartBackspace: true,
         })
 
         return () => typed.destroy()
@@ -62,7 +63,7 @@ const AboutCard = () => {
                                     {contact.location}
                             </div>
                             <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 justify-center md:justify-start">
                                     Hey, I&apos;m
                                     <span ref={typedRef}></span>
                                 </div>
@@ -75,7 +76,7 @@ const AboutCard = () => {
                                     }}
                                 />
                             </div>
-                            <Button className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} uppercase ${isDarkMode ? 'dark-text-color' : 'text-white'} w-full lg:w-52 p-2 rounded-2xl shadow-lg`}>
+                            <Button href="/about" className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} uppercase ${isDarkMode ? 'dark-text-color' : 'text-white'} w-full lg:w-52 p-2 rounded-2xl shadow-lg transition`}>
                                 <p>
                                     More About Me
                                 </p>
@@ -96,7 +97,7 @@ const AboutCard = () => {
                         {newSocials.map((chunk, index) => (
                             <div key={index} className="flex gap-3 h-full w-full">
                                 {chunk.map((social, index) => (
-                                    <div key={index} className={`shadow-lg ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center ${isDarkMode ? 'dark-text-color' : 'text-white'} text-5xl flex-col py-5`}>
+                                    <div key={index} className={`transition shadow-lg ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center ${isDarkMode ? 'dark-text-color' : 'text-white'} text-5xl flex-col py-5`}>
                                         <a href={social.link} target="new" className="flex flex-col gap-3 justify-center items-center">
                                             {social.icon}
                                             <span className="text-xs">{social.handle}</span>
