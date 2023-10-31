@@ -31,7 +31,7 @@ body {
 }
 
 .light-text-color {
-    color: var(--light-bg-color);
+    color: var(--extra-light-bg-color);
 }
 
 .medium-bg-color {
