@@ -5,13 +5,17 @@ import {
     PiGithubLogoDuotone,
     PiCodepenLogoDuotone,
     PiDiscordLogoDuotone,
+    PiChatCenteredTextDuotone,
 } from 'react-icons/pi'
 
+import { GiClothes } from 'react-icons/gi'
+
+import { TbBrandAirbnb, TbBrandVercel } from 'react-icons/tb'
 
 const data = {
     name: "Victor Krenzel",
     description: "I'm a tech enthusiast, driven by curiosity and creativity, passionate about problem-solving and continuous learning.",
-    photo: "https://i.imgur.com/zRh91Xd.png",
+    photo: "https://i.imgur.com/udGR1n7.png",
     contact: {
         company: "Scotiabank",
         email: "vkrenzel@outlook.com",
@@ -60,7 +64,11 @@ const data = {
         {
             name: "Airbnb Clone",
             dateYear: "2023",
-            image: "https://i.imgur.com/l5s5dGb.png",
+            imageIcon: <TbBrandAirbnb />,
+            headerIcons: [
+                <TbBrandVercel key="vercel" />,
+
+            ],
             description:
                 "A feature-rich Airbnb clone showcasing CRUD, user authentication, search filters, interactive maps, and efficient media management, highlighting my expertise in building innovative web applications.",
             link: "https://project1-link.com",
@@ -74,11 +82,15 @@ const data = {
         },
         {
             name: "Chatalot",
+            link: '',
+            githubLink: 'https://github.com/vkrenz/chatalot-app',
             dateYear: "2022",
-            image: "https://via.placeholder.com/300x300.png",
+            imageIcon: <PiChatCenteredTextDuotone />,
+            headerIcons: [
+
+            ],
             description:
                 "A dynamic web app combining style and function. With dark mode, Google login, and real-time chat via Firebase, it elevates online conversations. User security ensures privacy. Chatalot reflects my commitment to creating engaging and secure web apps.",
-            link: "https://project2-link.com",
             languages: [
                 "React", 
                 "Tailwind CSS", 
@@ -88,7 +100,10 @@ const data = {
         {
             name: "EssentiaMarket",
             dateYear: "2023",
-            image: "https://via.placeholder.com/300x300.png",
+            imageIcon: <GiClothes />,
+            headerIcons: [
+
+            ],
             description:
                 "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",
             link: "https://project2-link.com",

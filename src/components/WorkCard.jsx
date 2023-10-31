@@ -1,60 +1,25 @@
 /* eslint-disable react/jsx-key */
-import data from '../myData.json'
+import data from '../data'
 
 import { Button } from 'flowbite-react';
 
 import { BsArrowRight } from 'react-icons/bs'
-import { PiCodeDuotone, PiChatCenteredTextDuotone } from 'react-icons/pi'
-import { TbBrandAirbnb } from 'react-icons/tb'
-import { DiGithubAlt } from 'react-icons/di'
-import { FiArrowUpRight } from 'react-icons/fi'
-import { GiClothes } from 'react-icons/gi'
-
+import { PiCodeDuotone } from 'react-icons/pi'
 
 const WorkCard = () => {
     const {
-        // name,
-        // company,
-        // description,
-        // profilePicture,
-        // contactInfo,
-        // socials,
         projects,
-        // skills,
     } = data
-
-    {/** TODO: Fix: render this info! */}
-    const projectIcons = [
-        {
-            icons: [
-                {
-                    link: "",
-                    icon: <DiGithubAlt />,
-                },
-                {
-                    link: "",
-                    icon: <FiArrowUpRight />,
-                },
-            ],
-        },
-        // Add more projects and their icons
-    ];
-
-    const imageIcons = [
-        <TbBrandAirbnb />,
-        <PiChatCenteredTextDuotone />,
-    ]
 
     const projectsComponent = projects.map((project, index) => (
         <>
-            {/* Display only the first 2 projects */}
+            {/* Display only the first 2 projects (index <= 1) */}
             {index <= 1 && (
                 <div key={index} className="flex flex-col w-full mt-5"> {/** Projects Container */}
                     <div className="flex flex-col gap-3">
                         <div className="flex lg:gap-7">
-                            {/* <img src={project.image} alt="Project 1" className="rounded-2xl w-0 lg:w-24 lg:max-h-24 md:visible" /> */}
                             <div className="rounded-2xl w-0 lg:w-28 lg:h-24 md:visible flex items-center justify-center dark-bg-color expand-hover">
-                                <div key={index} className="text-5xl text-white lg:shadow-lg">{imageIcons[index]}</div>
+                                <div key={index} className="text-5xl text-white lg:shadow-lg">{project.imageIcon}</div>
                             </div>
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
                                 <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center">
@@ -65,12 +30,11 @@ const WorkCard = () => {
                                         </span>
                                         <span className="dark-text-color ms-1">
                                             {project.name}
-                                            {/* <FiArrowUpRight className="w-6 h-6" /> */}
                                         </span>
                                         </div>
                                     </div>
-                                    {
-                                        projectIcons.map((project, index) => (
+                                    {/* {
+                                        project.headerIcons?.map((project, index) => (
                                             <div key={index} className="flex gap-3 text-2xl">
                                                 {
                                                     project.icons.map((icon, iconIndex) => {
@@ -79,10 +43,9 @@ const WorkCard = () => {
                                                 }
                                             </div>
                                         ))
-                                    }
+                                    } */}
                                 </div>
-                                <p className="text-sm md:text-md">{project.description}</p> 
-                                {/* <a href="#" className="font-semibold">Learn More</a> */}
+                                <p className="text-sm md:text-md">{project.description} <a href={`/project/${project.name}`} className="dark-text-color font-semibold">Learn More</a></p> 
                             </div>
                         </div>
                         <div className="flex items-start flex-wrap gap-3 mt-3 mb-3">
