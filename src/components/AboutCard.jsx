@@ -1,5 +1,6 @@
 import data from '../data'
-
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
 import { Button } from 'flowbite-react';
 
 import { BsArrowRight } from 'react-icons/bs'
@@ -8,11 +9,7 @@ import { PiMapPinLineDuotone } from 'react-icons/pi'
 
 import { useDarkMode } from '../DarkModeContext';
 
-const AboutCard = (
-        // {
-        //     isDarkMode
-        // }
-) => {
+const AboutCard = () => {
     const {
         name,
         description,
@@ -20,6 +17,26 @@ const AboutCard = (
         contact,
         socials,
     } = data
+
+    const typedRef = useRef(null)
+
+    useEffect(() => {
+        const typed = new Typed(typedRef.current, {
+            strings: [
+                "a Student",
+                "a Banker",
+                "a Teller",
+                `${name.split(" ")[0]}! 👋`
+            ],
+            startDelay: 300,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 100,
+            showCursor: false,
+        })
+
+        return () => typed.destroy()
+    }, [name])
 
     const { isDarkMode } = useDarkMode()
     
@@ -45,7 +62,11 @@ const AboutCard = (
                                     {contact.location}
                             </div>
                             <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
-                                Hey, I&apos;m {name.split(" ")[0]}! 👋
+                                <div className="flex gap-2">
+                                    Hey, I&apos;m
+                                    <span ref={typedRef}></span>
+                                </div>
+                                {/* {name.split(" ")[0]}! 👋 */}
                             </div>
                             <div className={`text-sm md:text-md ${isDarkMode ? 'text-white' : 'text-neutral-800'}`}>
                                 <p

@@ -6,7 +6,7 @@ const Home = () => {
         <>
             <AboutCard />
             <WorkCard 
-                // displayProjects={2}
+                displayProjects={2}
             />
         </>
     );

@@ -8,12 +8,7 @@ import { Navbar } from 'flowbite-react';
 
 import { useDarkMode } from '../DarkModeContext';
 
-const NavbarComponent = (
-    // {
-    //     isDarkMode,
-    //     toggleDarkMode,
-    // }
-) => {
+const NavbarComponent = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode()
 
     console.info(`(NavbarComponent.jsx): Dark Mode: ${isDarkMode}`)
@@ -116,24 +111,6 @@ const NavbarComponent = (
                 </Navbar.Collapse>
                 <div className="flex gap-5 mx-auto sm:float-right mt-2 me-2 ms-2">
                     {renderHues}
-                    {/* <div className={`${activeHue === 190 ? 'animate-bounce-custom border-2 border-neutral-400 rounded-full w-6 h-6 flex items-center justify-center' : ''}`}>
-                        <button 
-                            className={`expand-hover bg-sky-100 ${activeHue === 190 ? 'w-4 h-4' : 'w-6 h-6'} rounded-full border border-neutral-400`}
-                            onClick={() => handleHueChange(190)}
-                        ></button>
-                    </div>
-                    <div className={`${activeHue === 0 ? 'animate-bounce-custom border-2 border-neutral-400 rounded-full w-6 h-6 flex items-center justify-center' : ''}`}>
-                        <button 
-                            className={`expand-hover bg-red-100 ${activeHue === 0 ? 'w-4 h-4' : 'w-6 h-6'} rounded-full border border-neutral-400`}
-                            onClick={() => handleHueChange(0)}
-                        ></button>
-                    </div>
-                    <div className={`${activeHue === 120 ? 'animate-bounce-custom border-2 border-neutral-400 rounded-full w-6 h-6 flex items-center justify-center' : ''}`}>
-                        <button 
-                            className={`expand-hover bg-green-100 ${activeHue === 120 ? 'w-4 h-4' : 'w-6 h-6'} rounded-full border border-neutral-400`}
-                            onClick={() => handleHueChange(120)}
-                        ></button>
-                    </div> */}
                 </div>
             </Navbar>
             <div 

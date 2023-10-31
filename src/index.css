@@ -72,5 +72,5 @@ body {
   
   
 .animate-bounce-custom {
-    animation: flip 0.35s linear; /* Adjust the duration (2s) as needed */
+    animation: flip 0.25s linear; /* Adjust the duration (2s) as needed */
 }
