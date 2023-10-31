@@ -43,7 +43,6 @@ const WorkCard = () => {
     const imageIcons = [
         <TbBrandAirbnb />,
         <PiChatCenteredTextDuotone />,
-        <GiClothes />,
     ]
 
     const projectsComponent = projects.map((project, index) => (
@@ -89,7 +88,7 @@ const WorkCard = () => {
                         <div className="flex items-start flex-wrap gap-3 mt-3 mb-3">
                             {
                                 project.languages.map((language, index) => (
-                                    <div key={index} className="capitalize font-semibold text-base px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap">{language}</div>
+                                    <div key={index} className="text-base px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap">{language}</div>
                                 ))
                             }
                         </div>

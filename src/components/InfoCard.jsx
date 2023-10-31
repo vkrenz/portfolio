@@ -1,31 +1,29 @@
-import data from '../myData.json'
+import data from '../data'
 
 import { Button } from 'flowbite-react';
 
 import { BsArrowRight } from 'react-icons/bs'
 import { LiaLinkSolid } from 'react-icons/lia'
-import { 
-    PiTwitterLogoDuotone, 
-    PiInstagramLogoDuotone,
-    PiGithubLogoDuotone,
-    PiLinkedinLogoDuotone,
-    PiCodepenLogoDuotone,
-    PiWhatsappLogoDuotone,
-    // PiSuitcaseDuotone,
-    PiMapPinLineDuotone,
-} from 'react-icons/pi'
+import { PiMapPinLineDuotone } from 'react-icons/pi'
 
 const AboutCard = () => {
     const {
         name,
-        company,
         description,
-        profilePicture,
-        contactInfo,
+        photo,
+        contact,
         socials,
-        projects,
-        skills,
     } = data
+    
+    const splitSocials = (arr, size = 3) => {
+        const split = []
+        for (let i = 0; i < arr.length; i += size) {
+            split.push(arr.slice(i, i + size))
+        }
+        return split
+    }
+
+    const newSocials = splitSocials(socials)
 
     return (
         <div>
@@ -35,22 +33,9 @@ const AboutCard = () => {
                     <div className="flex h-full">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between">
                             <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base">
-                                {/* {contactInfo.username} */}
-                                <>
                                     <PiMapPinLineDuotone className="w-5 h-5" />
-                                </>
-                                <>
-                                    {contactInfo.location}
-                                </>
+                                    {contact.location}
                             </div>
-                            {/* <div className="text-neutral-400 uppercase font-semibold flex gap-3 items-center">
-                                <>
-                                    <PiSuitcaseDuotone className="w-5 h-5" />
-                                </>
-                                <>
-                                    {company}
-                                </>
-                            </div> */}
                             <div className="md:text-2xl font-bold dark-text-color text-lg">
                                 Hey, I&apos;m {name.split(" ")[0]}! 👋
                             </div>
@@ -69,7 +54,7 @@ const AboutCard = () => {
                             </Button>
                         </div>
                         <div className="w-0 lg:w-1/4 invisible lg:visible"> 
-                            <img src={profilePicture} alt="Profile Picture" className="w-40 ms-auto rounded-2xl" />
+                            <img src={photo} alt="Profile Picture" className="w-40 ms-auto rounded-2xl" />
                         </div>
                     </div>
                 </div>
@@ -79,34 +64,18 @@ const AboutCard = () => {
                         Socials
                     </div>
                     <div className="flex flex-col gap-3 h-full md:justify-around w-full">
-                        <div className="flex gap-3 h-full w-full">
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
-                                <PiGithubLogoDuotone />
-                                {/* <span className="text-xs mt-3">Github</span> */}
+                        {newSocials.map((chunk, index) => (
+                            <div key={index} className="flex gap-3 h-full w-full">
+                                {chunk.map((social, index) => (
+                                    <div key={index} className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
+                                        <a href={social.link} target="new" className="flex flex-col gap-3 justify-center items-center">
+                                            {social.icon}
+                                            <span className="text-xs">{social.handle}</span>
+                                        </a>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
-                                <PiTwitterLogoDuotone />
-                                {/* <span className="text-xs mt-3">Twitter</span> */}
-                            </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
-                                <PiCodepenLogoDuotone />
-                                {/* <span className="text-xs mt-3">Codepen</span> */}
-                            </div>
-                        </div>
-                        <div className="flex gap-3 h-full w-full">
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
-                                <PiInstagramLogoDuotone />
-                                {/* <span className="text-xs mt-3">Instagram</span> */}
-                            </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
-                                <PiLinkedinLogoDuotone />
-                                {/* <span className="text-xs mt-3">LinkedIn</span> */}
-                            </div>
-                            <div className="shadow-lg dark-bg-color expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center text-white text-5xl flex-col py-5">
-                                <PiWhatsappLogoDuotone />
-                                {/* <span className="text-xs mt-3">Whatsapp</span> */}
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

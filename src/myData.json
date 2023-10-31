@@ -10,16 +10,19 @@
     },
     "socials": {
       "instagram": {
-        "link": "your-instagram-username"
+        "link": "https://www.instagram.com/v.krzl/"
       },
       "twitter": {
-        "link": "your-twitter-username"
+        "link": "https://twitter.com/vkrenzel"
       },
       "linkedin": {
-        "link": "your-linkedin-profile"
+        "link": "https://www.linkedin.com/in/vkrenz/"
       },
       "github": {
-        "link": "your-github-username"
+        "link": "https://github.com/vkrenz"
+      },
+      "codepen": {
+        "link": "https://codepen.io/vkrenzel"
       }
     },
     "projects": [
@@ -41,7 +44,7 @@
         "name": "Chatalot",
         "dateYear": "2022",
         "image": "https://via.placeholder.com/300x300.png",
-        "description": "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",
+        "description": "A dynamic web app combining style and function. With dark mode, Google login, and real-time chat via Firebase, it elevates online conversations. User security ensures privacy. Chatalot reflects my commitment to creating engaging and secure web apps.",
         "link": "https://project2-link.com",
         "languages": [
           "React", 
