@@ -29,25 +29,31 @@ const WorkCard = ({
                             </div>
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
                                 <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center">
-                                    <div>
+                                    <div className="flex justify-center w-full md:justify-start">
                                         <div className="font-semibold text-md flex gap-2 items-center">
                                             <span className="flex lg:hidden text-2xl">
                                                 {project.imageIcon}
                                             </span>
-                                            <span className="text-neutral-400">
-                                                {project.dateYear} &middot;
-                                            </span>
                                             <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
                                                 {project.name}
                                             </span>
+                                            <span className="text-neutral-400">
+                                                {project.dateYear}
+                                            </span>
+                                            {
+                                                project.headerIcons.map((item, index) => (
+                                                    <a key={index} href={item.link} className="text-2xl">
+                                                        {item.icon}
+                                                    </a>
+                                                ))
+                                            }
                                         </div>
                                     </div>
-
                                 </div>
-                                <p className="text-sm md:text-md">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
+                                <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
                             </div>
                         </div>
-                        <div className="flex items-start flex-wrap gap-3 mt-3 mb-3">
+                        <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 mt-3 mb-3">
                             {
                                 project.languages.map((language, index) => (
                                     <div key={index} className="transition text-base px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color">{language}</div>
@@ -65,7 +71,7 @@ const WorkCard = ({
         <div className="mb-14">
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base mt-14">My Work</div>
             <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full`}>
-                <div className="flex items-center gap-2 text-neutral-400 uppercase font-semibold">
+                <div className={`flex items-center justify-center md:justify-start gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold`}>
                     <PiCodeDuotone className="h-5 w-5" />
                     Projects
                 </div>

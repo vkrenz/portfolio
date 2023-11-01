@@ -66,8 +66,10 @@ const data = {
             dateYear: "2023",
             imageIcon: <TbBrandAirbnb />,
             headerIcons: [
-                <TbBrandVercel key="vercel" />,
-
+                {
+                    icon: <TbBrandVercel key="vercel" />,
+                    link: 'https://bnb-nu.vercel.app/'
+                },
             ],
             description:
                 "A feature-rich Airbnb clone showcasing CRUD, user authentication, search filters, interactive maps, and efficient media management, highlighting my expertise in building innovative web applications.",
