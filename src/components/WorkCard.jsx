@@ -24,22 +24,23 @@ const WorkCard = ({
                 <div key={index} className="flex flex-col w-full mt-5"> {/** Projects Container */}
                     <div className="flex flex-col gap-3">
                         <div className="flex lg:gap-7">
-                            <div className={`rounded-2xl w-0 lg:w-28 lg:h-24 hidden lg:flex items-center justify-center ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover shadow-lg`}>
+                            <div className={`transition rounded-2xl w-0 lg:w-28 lg:h-24 hidden lg:flex items-center justify-center ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover shadow-lg`}>
                                 <div key={index} className={`text-5xl ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>{project.imageIcon}</div>
                             </div>
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
                                 <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center">
                                     <div className="flex justify-center w-full md:justify-start">
-                                        <div className="font-semibold text-md flex gap-2 items-center">
+                                        <div className="font-semibold text-md flex gap-3 items-center">
                                             <span className="flex lg:hidden text-2xl">
                                                 {project.imageIcon}
                                             </span>
                                             <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
                                                 {project.name}
                                             </span>
-                                            <span className="text-neutral-400">
+                                            <span className="text-neutral-400 ms-auto flex md:hidden">
                                                 {project.dateYear}
                                             </span>
+                                            <div>&middot;</div>
                                             {
                                                 project.headerIcons.map((item, index) => (
                                                     <a key={index} href={item.link} className="text-2xl">
@@ -48,6 +49,9 @@ const WorkCard = ({
                                                 ))
                                             }
                                         </div>
+                                        <span className="text-neutral-400 ms-auto hidden md:flex">
+                                            {project.dateYear}
+                                        </span>
                                     </div>
                                 </div>
                                 <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 

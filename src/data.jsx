@@ -12,6 +12,10 @@ import { GiClothes } from 'react-icons/gi'
 
 import { TbBrandAirbnb, TbBrandVercel } from 'react-icons/tb'
 
+import { FaGithubAlt } from 'react-icons/fa'
+
+import { MdOpenInNew } from 'react-icons/md'
+
 const data = {
     name: "Victor Krenzel",
     description: "I'm a tech enthusiast, driven by curiosity and creativity, passionate about problem-solving and continuous learning.",
@@ -68,7 +72,11 @@ const data = {
             headerIcons: [
                 {
                     icon: <TbBrandVercel key="vercel" />,
-                    link: 'https://bnb-nu.vercel.app/'
+                    link: 'https://bnb-nu.vercel.app/',
+                },
+                {
+                    icon: <FaGithubAlt key="github"/>,
+                    link: 'https://github.com/vkrenz/airbnb-clone',
                 },
             ],
             description:
@@ -89,7 +97,14 @@ const data = {
             dateYear: "2022",
             imageIcon: <PiChatCenteredTextDuotone />,
             headerIcons: [
-
+                {
+                    icon: <FaGithubAlt key="github"/>,
+                    link: 'https://github.com/vkrenz/chatalot-app',
+                },
+                {
+                    icon: <MdOpenInNew key="open" />,
+                    link: 'https://vkrenz.github.io/chatalot-app/',
+                },
             ],
             description:
                 "A dynamic web app combining style and function. With dark mode, Google login, and real-time chat via Firebase, it elevates online conversations. User security ensures privacy. Chatalot reflects my commitment to creating engaging and secure web apps.",

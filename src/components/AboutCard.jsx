@@ -23,10 +23,10 @@ const AboutCard = () => {
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
             strings: [
-                "a Student",
-                "a Banker",
-                "a Teller",
-                `${name.split(" ")[0]}! 👋`
+                'a <span class="medium-text-color">Student</span>',
+                'a <span class="medium-text-color">Banker</span>',
+                'a <span class="medium-text-color">Developer</span>',
+                `<span class="medium-text-color">${name.split(" ")[0]}</span> 👋`
             ],
             startDelay: 500,
             typeSpeed: 100,
@@ -34,6 +34,9 @@ const AboutCard = () => {
             backDelay: 100,
             showCursor: true,
             smartBackspace: true,
+            onComplete: (self) => {
+                self.cursor.remove(); // Remove the cursor when typing is complete
+            },
         })
 
         return () => typed.destroy()
