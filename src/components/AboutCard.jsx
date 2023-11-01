@@ -100,7 +100,7 @@ const AboutCard = () => {
                         {newSocials.map((chunk, index) => (
                             <div key={index} className="flex gap-3 h-full w-full">
                                 {chunk.map((social, index) => (
-                                    <div key={index} className={`transition shadow-lg ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover transition cursor-pointer w-full h-full rounded-3xl flex items-center justify-center ${isDarkMode ? 'dark-text-color' : 'text-white'} text-5xl flex-col py-5`}>
+                                    <div key={index} className={`transition shadow-lg ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover transition cursor-pointer w-full h-full rounded-2xl flex items-center justify-center ${isDarkMode ? 'dark-text-color' : 'text-white'} text-5xl flex-col py-5`}>
                                         <a href={social.link} target="new" className="flex flex-col gap-3 justify-center items-center">
                                             {social.icon}
                                             <span className="text-xs">{social.handle}</span>

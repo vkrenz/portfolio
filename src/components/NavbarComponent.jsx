@@ -86,7 +86,7 @@ const NavbarComponent = () => {
             className={`
                 capitalize 
                 text-base 
-                ${pathname === `/${option}` ? `font-semibold ${isDarkMode? 'medium-text-color' : 'dark-text-color'}` : ''}
+                ${pathname === `/${option}` ? `font-semibold ${isDarkMode? 'light-text-color' : 'dark-text-color'}` : ''}
             `}
         >
             {option}

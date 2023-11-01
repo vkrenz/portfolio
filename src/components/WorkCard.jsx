@@ -80,7 +80,7 @@ const WorkCard = ({
                     Projects
                 </div>
                 {projectsComponent}
-                <Button className="expand-hover dark-bg-color w-full lg:w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto">
+                <Button className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} w-full lg:w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>
                     <p className="uppercase">
                         View All
                     </p>
