@@ -119,7 +119,14 @@ const data = {
             dateYear: "2023",
             imageIcon: <GiClothes />,
             headerIcons: [
-
+                {
+                    icon: <FaGithubAlt key="github"/>,
+                    link: 'https://github.com/vkrenz/chatalot-app',
+                },
+                {
+                    icon: <MdOpenInNew key="open" />,
+                    link: 'https://vkrenz.github.io/chatalot-app/',
+                },
             ],
             description:
                 "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",

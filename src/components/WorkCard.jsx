@@ -71,7 +71,7 @@ const WorkCard = ({
                         <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 mt-3 mb-3">
                             {
                                 project.languages.map((language, index) => (
-                                    <div key={index} className="transition text-xs md:text-base px-3 md:px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color">{language}</div>
+                                    <div key={index} className="transition text-xs md:text-base px-3 md:px-4 py-2 rounded-full light-bg-color whitespace-nowrap dark-text-color">{language}</div>
                                 ))
                             }
                         </div>
@@ -86,7 +86,7 @@ const WorkCard = ({
         <div className="mb-14">
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base mt-14">My Work</div>
             <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full`}>
-                <div className={`flex items-center justify-center md:justify-start gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold`}>
+                <div className={`flex items-center justify-center md:justify-start gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-8`}>
                     <PiCodeDuotone className="h-5 w-5" />
                     Projects
                 </div>

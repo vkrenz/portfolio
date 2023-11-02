@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './App.jsx'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './index.css'
 import Layout from './components/Layout.jsx'
 
@@ -16,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <DarkModeProvider>
         <Layout>
             <Routes>
+              <Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
             </Routes>
