@@ -23,7 +23,8 @@ const Footer = () => {
                     px-6
                 `}
             >
-                <div 
+                <a
+                    href="https://github.com/vkrenz/portfolio-2"
                     className={`
                         ${isDarkMode ? 'text-white' : 'dark-text-color'}
                         flex 
@@ -35,7 +36,7 @@ const Footer = () => {
                 >
                     <FaGithubAlt className="w-5 h-5" /> 
                     <p>Code</p>
-                </div>
+                </a>
             </div>
             <div className="flex flex-col md:flex-row gap-3 w-full">
                 <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-5 rounded-2xl lg:rounded-full w-full flex flex-col md:flex-row md:justify-between`}>
@@ -63,7 +64,8 @@ const Footer = () => {
                         p-6
                     `}
                 >
-                    <div 
+                    <a 
+                        href="https://github.com/vkrenz/portfolio-2"
                         className={`
                             ${isDarkMode ? 'text-white' : 'dark-text-color'}
                             flex 
@@ -75,9 +77,9 @@ const Footer = () => {
                         `}
                     >
                         <FaGithubAlt className="w-5 h-5" /> 
-                        <p>Source Code</p> 
+                            <p>Source Code</p> 
                         <FiArrowUpRight className="w-5 h-5" />
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
