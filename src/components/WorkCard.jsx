@@ -40,7 +40,7 @@ const WorkCard = ({
                                             <span className="text-neutral-400 ms-auto flex md:hidden">
                                                 {project.dateYear}
                                             </span>
-                                            <div className="hidden md:flex">
+                                            <div className="gap-2 hidden md:flex">
                                                 <div>&middot;</div>
                                                 {
                                                     project.headerIcons.map((item, index) => (
@@ -55,6 +55,15 @@ const WorkCard = ({
                                             {project.dateYear}
                                         </span>
                                     </div>
+                                    <div className="gap-2 flex md:hidden mx-auto">
+                                        {
+                                            project.headerIcons.map((item, index) => (
+                                                <a key={index} href={item.link} className="text-2xl">
+                                                    {item.icon}
+                                                </a>
+                                            ))
+                                        }
+                                    </div>
                                 </div>
                                 <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
                             </div>
@@ -62,7 +71,7 @@ const WorkCard = ({
                         <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 mt-3 mb-3">
                             {
                                 project.languages.map((language, index) => (
-                                    <div key={index} className="transition text-base px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color">{language}</div>
+                                    <div key={index} className="transition text-xs md:text-base px-3 md:px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color">{language}</div>
                                 ))
                             }
                         </div>

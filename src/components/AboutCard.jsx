@@ -56,11 +56,14 @@ const AboutCard = () => {
 
     return (
         <div>
+            {/* <div className="block lg:hidden bg-neutral-600 w-full rounded-2xl mb-5"> 
+                <img src={photo} alt="Profile Picture" className="w-40 mx-auto rounded-2xl" />
+            </div> */}
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base">About Me</div>
             <div className="flex md:flex-row flex-col gap-7">
                 <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full lg:w-1/2`}> {/** Left Column */}
                     <div className="flex h-full ">
-                        <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between">
+                        <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between items-center lg:items-start">
                             <div className={`${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base`}>
                                     <PiMapPinLineDuotone className="w-5 h-5" />
                                     {contact.location}
@@ -86,8 +89,8 @@ const AboutCard = () => {
                                 <BsArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                         </div>
-                        <div className="w-0 lg:w-1/4 invisible lg:visible"> 
-                            <img src={photo} alt="Profile Picture" className="w-40 ms-auto rounded-2xl" />
+                        <div className="w-1/3 hidden lg:block"> 
+                            <img src={photo} alt="Profile Picture" className="w-40 ms-auto" />
                         </div>
                     </div>
                 </div>
@@ -100,7 +103,7 @@ const AboutCard = () => {
                         {newSocials.map((chunk, index) => (
                             <div key={index} className="flex gap-3 h-full w-full">
                                 {chunk.map((social, index) => (
-                                    <div key={index} className={`transition shadow-lg ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover transition cursor-pointer w-full h-full rounded-2xl flex items-center justify-center ${isDarkMode ? 'dark-text-color' : 'text-white'} text-5xl flex-col py-5`}>
+                                    <div key={index} className={`transition shadow-lg ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover transition cursor-pointer w-full h-full rounded-2xl flex items-center justify-center ${isDarkMode ? 'dark-text-color' : 'text-white'} text-5xl flex-col py-5 `}>
                                         <a href={social.link} target="new" className="flex flex-col gap-3 justify-center items-center">
                                             {social.icon}
                                             <span className="text-xs">{social.handle}</span>
