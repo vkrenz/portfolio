@@ -24,7 +24,7 @@ const NavbarComponent = () => {
         };
     }
 
-    const { pathname } = useRouter();
+    const { pathname } = useRouter()
 
     const options = [
         'home',

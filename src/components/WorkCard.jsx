@@ -40,14 +40,16 @@ const WorkCard = ({
                                             <span className="text-neutral-400 ms-auto flex md:hidden">
                                                 {project.dateYear}
                                             </span>
-                                            <div>&middot;</div>
-                                            {
-                                                project.headerIcons.map((item, index) => (
-                                                    <a key={index} href={item.link} className="text-2xl">
-                                                        {item.icon}
-                                                    </a>
-                                                ))
-                                            }
+                                            <div className="hidden md:flex">
+                                                <div>&middot;</div>
+                                                {
+                                                    project.headerIcons.map((item, index) => (
+                                                        <a key={index} href={item.link} className="text-2xl">
+                                                            {item.icon}
+                                                        </a>
+                                                    ))
+                                                }
+                                            </div>
                                         </div>
                                         <span className="text-neutral-400 ms-auto hidden md:flex">
                                             {project.dateYear}
