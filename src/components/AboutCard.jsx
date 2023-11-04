@@ -9,7 +9,9 @@ import { PiMapPinLineDuotone } from 'react-icons/pi'
 
 import { useDarkMode } from '../DarkModeContext';
 
-const AboutCard = () => {
+const AboutCard = ({
+    showPhotoSmallScreen = true,
+}) => {
     const {
         name,
         description,
@@ -56,9 +58,13 @@ const AboutCard = () => {
 
     return (
         <div>
-            {/* <div className="block lg:hidden bg-neutral-600 w-full rounded-2xl mb-5"> 
-                <img src={photo} alt="Profile Picture" className="w-40 mx-auto rounded-2xl" />
-            </div> */}
+            {
+                showPhotoSmallScreen && (
+                    <div className="block lg:hidden bg-neutral-600 w-full rounded-2xl mb-5"> 
+                        <img src={photo} alt="Profile Picture" className="w-40 mx-auto rounded-2xl" />
+                    </div>
+                )
+            }
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base">About Me</div>
             <div className="flex md:flex-row flex-col gap-7">
                 <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full lg:w-1/2`}> {/** Left Column */}

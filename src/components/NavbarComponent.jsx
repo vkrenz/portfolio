@@ -67,8 +67,6 @@ const NavbarComponent = () => {
                     transition
                     expand-hover
                     rounded-full
-                    border
-                    ${isDarkMode ? 'border-neutral-100' : 'border-neutral-400'} 
                 `}
             />
         </div>
@@ -94,44 +92,51 @@ const NavbarComponent = () => {
     ))
 
     return (
-        <div className="flex gap-3 mb-14 mt-10">
-            <Navbar 
-                className={`
-                    ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 
-                    p-3 
-                    rounded-2xl 
-                    lg:rounded-full 
-                    w-full 
-                    flex 
-                    justify-center
-                `} 
-            rounded>
-                <Navbar.Toggle className="me-auto"/>
-                <Navbar.Collapse className="md:ms-4">
-                    {navOptions}
-                </Navbar.Collapse>
-                <div className="flex gap-5 mx-auto sm:float-right mt-2 me-2 ms-2">
-                    {renderHues}
+        <div className="flex flex-col lg:flex-row w-full">
+            <div className="flex gap-3 mb-7 lg:mb-14 mt-10">
+                <Navbar 
+                    className={`
+                        ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 
+                        p-3 
+                        rounded-2xl 
+                        lg:rounded-full 
+                        w-full 
+                        flex 
+                        justify-center
+                    `} 
+                rounded>
+                    <Navbar.Toggle className="me-auto"/>
+                    <Navbar.Collapse className="md:ms-4">
+                        {navOptions}
+                    </Navbar.Collapse>
+                    <div className="hidden lg:flex gap-5 mx-auto sm:float-right mt-2 me-2 ms-2">
+                        {renderHues}
+                    </div>
+                </Navbar>
+                <div 
+                    className={`
+                        ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
+                        transition
+                        expand-hover 
+                        cursor-pointer 
+                        h-auto 
+                        w-1/3 
+                        md:w-28 
+                        rounded-2xl 
+                        lg:rounded-full 
+                        flex items-center 
+                        justify-center 
+                        text-2xl
+                    `}
+                    onClick={toggleDarkMode}
+                >
+                    {isDarkMode ? <PiSunHorizonDuotone className="text-white" /> : <PiMoonStarsDuotone className="text-neutral-500"/>}
                 </div>
-            </Navbar>
-            <div 
-                className={`
-                    ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
-                    transition
-                    expand-hover 
-                    cursor-pointer 
-                    h-auto w-1/3 
-                    md:w-28 
-                    rounded-2xl 
-                    lg:rounded-full 
-                    flex items-center 
-                    justify-center 
-                    text-2xl
-                `}
-                onClick={toggleDarkMode}
-            >
-                {isDarkMode ? <PiSunHorizonDuotone className="text-white" /> : <PiMoonStarsDuotone className="text-neutral-500"/>}
             </div>
+            <div className="flex lg:hidden gap-5 mx-auto mb-7">
+                {renderHues}
+            </div>
+
         </div>
     );
 }
