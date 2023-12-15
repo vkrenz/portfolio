@@ -4,7 +4,7 @@ import WorkCard from '../components/WorkCard'
 const Home = () => {
     return (
         <>
-            <AboutCard />
+            <AboutCard showPhotoSmallScreen={false} />
             <WorkCard 
                 displayProjects={2}
             />

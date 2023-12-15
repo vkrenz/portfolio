@@ -27,12 +27,12 @@ const NavbarComponent = () => {
     const { pathname } = useRouter()
 
     const options = [
-        'home',
-        'about', 
-        'work', 
-        'resume', 
-        'blog', 
-        'contact',
+        'Home',
+        'About', 
+        'Work', 
+        'Resume', 
+        'Blog', 
+        'Contact',
     ];
 
     const hueOpts = [
@@ -93,7 +93,7 @@ const NavbarComponent = () => {
 
     return (
         <div className="flex flex-col lg:flex-row w-full">
-            <div className="flex gap-3 mb-7 lg:mb-14 mt-10">
+            <div className="flex gap-3 mb-7 lg:mb-14 mt-10 w-full">
                 <Navbar 
                     className={`
                         ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 

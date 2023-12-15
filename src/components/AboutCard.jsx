@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import data from '../data'
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
