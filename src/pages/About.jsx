@@ -1,8 +1,9 @@
+import AboutCardLarge from "../components/AboutCardLarge";
+
 const About = () => {
   return (
     <div>
-      <h2>About Us</h2>
-      <p>This is the About page content.</p>
+      <AboutCardLarge />
     </div>
   );
 };

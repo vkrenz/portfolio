@@ -21,6 +21,7 @@ const Footer = () => {
                     items-center 
                     justify-center 
                     px-6
+                    w-1/5
                 `}
             >
                 <a
@@ -35,7 +36,7 @@ const Footer = () => {
                     `}
                 >
                     <FaGithubAlt className="w-5 h-5" /> 
-                    <p>Code</p>
+                    <p>Source Code</p>
                 </a>
             </div>
             <div className="flex flex-col md:flex-row gap-3 w-full">
@@ -47,7 +48,7 @@ const Footer = () => {
                     </div>
                     <hr className={`w-24 mx-auto my-3 md:hidden ${isDarkMode ? 'light-text-color' : 'dark-text-color'}`} />
                     <div className={`text-xs lg:text-sm sm:ms-4 md:me-4 text-center md:text-left mt-1 ${isDarkMode ? 'light-text-color' : 'dark-text-color'}`}>
-                        vkrenzel &copy; 2023
+                        vkrenzel &copy; 2023-2024
                     </div>
                 </div>
                 <div 

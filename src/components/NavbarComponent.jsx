@@ -79,7 +79,7 @@ const NavbarComponent = () => {
 
     const navOptions = options.map((option, index) => (
         <Link 
-            to={`/${option}`} 
+            to={`/${option.toLowerCase()}`} 
             key={index} 
             className={`
                 capitalize 
