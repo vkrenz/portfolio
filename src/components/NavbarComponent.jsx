@@ -62,11 +62,13 @@ const NavbarComponent = () => {
             <button
                 onClick={() => handleHueChange(opt.hue)}
                 className={`
-                    ${activeHue === opt.hue ? 'w-4 h-4' : 'w-6 h-6'}
+                    ${activeHue === opt.hue ? 'w-4 h-4' : 'w-6 h-6 mt-[6px]'}
                     ${opt.bgColor}
                     transition
                     expand-hover
                     rounded-full
+                    border-neutral-400
+                    border
                 `}
             />
         </div>
@@ -84,7 +86,7 @@ const NavbarComponent = () => {
             className={`
                 capitalize 
                 text-base 
-                ${pathname === `/${option}` ? `font-semibold ${isDarkMode? 'light-text-color' : 'dark-text-color'}` : ''}
+                ${pathname === `/${option.toLowerCase()}` ? `font-semibold ${isDarkMode? 'medium-text-color' : 'dark-text-color'}` : ''}
             `}
         >
             {option}
@@ -109,29 +111,30 @@ const NavbarComponent = () => {
                     <Navbar.Collapse className="md:ms-4">
                         {navOptions}
                     </Navbar.Collapse>
-                    <div className="hidden lg:flex gap-5 mx-auto sm:float-right mt-2 me-2 ms-2">
-                        {renderHues}
+                    <div className="flex items-center gap-3 h-full">
+                        <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
+                            {renderHues}
+                        </div>
+                        <div
+                            className={`
+                                ${isDarkMode ? 'bg-neutral-700' : 'extra-light-bg-color'}
+                                transition
+                                expand-hover
+                                cursor-pointer
+                                rounded-full
+                                lg:rounded-full
+                                flex items-center
+                                justify-center
+                                w-[45px]
+                                h-full
+                                text-2xl
+                            `}
+                            onClick={toggleDarkMode}
+                        >
+                            {isDarkMode ? <PiSunHorizonDuotone className="light-text-color" /> : <PiMoonStarsDuotone className="dark-text-color"/>}
+                        </div>
                     </div>
                 </Navbar>
-                <div 
-                    className={`
-                        ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
-                        transition
-                        expand-hover 
-                        cursor-pointer 
-                        h-auto 
-                        w-1/3 
-                        md:w-28 
-                        rounded-2xl 
-                        lg:rounded-full 
-                        flex items-center 
-                        justify-center 
-                        text-2xl
-                    `}
-                    onClick={toggleDarkMode}
-                >
-                    {isDarkMode ? <PiSunHorizonDuotone className="text-white" /> : <PiMoonStarsDuotone className="text-neutral-500"/>}
-                </div>
             </div>
             <div className="flex lg:hidden gap-5 mx-auto mb-7">
                 {renderHues}

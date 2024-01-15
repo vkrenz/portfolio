@@ -39,6 +39,11 @@ body {
     border-bottom: 4px solid var(--medium-bg-color);
 }
 
+.underline-extra-light-color {
+    text-decoration: none;
+    border-bottom: 4px solid var(--extra-light-bg-color);
+}
+
 .light-text-color {
     color: var(--extra-light-bg-color);
 }

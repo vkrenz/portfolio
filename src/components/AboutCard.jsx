@@ -7,7 +7,7 @@ import { Button } from 'flowbite-react';
 
 import { BsArrowRight } from 'react-icons/bs'
 import { LiaLinkSolid } from 'react-icons/lia'
-import { PiMapPinLineDuotone } from 'react-icons/pi'
+import { PiMapPinLineDuotone, PiBankDuotone } from 'react-icons/pi'
 
 import { useDarkMode } from '../DarkModeContext';
 
@@ -73,9 +73,20 @@ const AboutCard = ({
                     <div className="flex h-full ">
                         <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between items-center lg:items-start">
                             <div className={`${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base`}>
-                                    <PiMapPinLineDuotone className="w-5 h-5" />
-                                    {contact.location}
+                                    <div className="flex items-center gap-3">
+                                        <PiBankDuotone className="w-5 h-5" />
+                                        {contact.company}
+                                    </div>
+                                    &middot;
+                                    <div className="flex items-center gap-3 text-neutral-400">
+                                        {/* <PiMapPinLineDuotone className="w-5 h-5" /> */}
+                                        {contact.location}
+                                    </div>
                             </div>
+                            {/* <div className={`${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base`}>
+                                    <PiBriefcaseDuotone className="w-5 h-5" />
+                                    {contact.company}
+                            </div> */}
                             <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
                                 <div className="flex gap-2 justify-center md:justify-start">
                                     Hey, I&apos;m

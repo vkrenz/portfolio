@@ -18,7 +18,7 @@ const AboutCardLarge = () => {
                         Enthusiastic about delivering high-quality <span className="underline-medium-color">applications</span>.
                     </div>
                     <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
-                        a <span className="medium-text-color">Software Developer</span> based in Toronto
+                        a <span className="medium-text-color underline-extra-light-color">Software Developer</span> based in Toronto
                     </div>
                 </div>
             </div>
