@@ -95,7 +95,7 @@ const NavbarComponent = () => {
 
     return (
         <div className="flex flex-col lg:flex-row w-full">
-            <div className="flex gap-3 mb-7 lg:mb-14 mt-10 w-full">
+            <div className="flex gap-3 my-14 w-full">
                 <Navbar 
                     className={`
                         ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 
@@ -107,10 +107,9 @@ const NavbarComponent = () => {
                         justify-center
                     `} 
                 rounded>
-                    <Navbar.Toggle className="me-auto"/>
-                    <Navbar.Collapse className="md:ms-4">
+                    <div className="md:ms-4 w-1/2 flex justify-around">
                         {navOptions}
-                    </Navbar.Collapse>
+                    </div>
                     <div className="flex items-center gap-3 h-full">
                         <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
                             {renderHues}

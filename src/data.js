@@ -27,6 +27,7 @@ const data = {
         location: "Toronto",
     },
     socials: [
+        /** 6 Max socials */
         {
             name: "Instagram",
             link: "https://www.instagram.com/v.krzl/",
