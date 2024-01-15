@@ -24,7 +24,7 @@ const WorkCard = ({
                 <div key={index} className="flex flex-col w-full mt-5"> {/** Projects Container */}
                     <div className="flex flex-col gap-3">
                         <div className="flex lg:gap-7">
-                            <div className={`transition rounded-2xl w-0 lg:w-28 lg:h-24 hidden lg:flex items-center justify-center ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} expand-hover shadow-lg`}>
+                            <div className={`transition rounded-2xl w-0 lg:w-28 lg:h-24 hidden lg:flex items-center justify-center ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} shadow-lg`}>
                                 <div key={index} className={`text-5xl ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>{project.imageIcon}</div>
                             </div>
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
@@ -71,7 +71,9 @@ const WorkCard = ({
                         <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 mt-3 mb-3">
                             {
                                 project.languages.map((language, index) => (
-                                    <div key={index} className="transition text-xs md:text-base px-3 md:px-4 py-2 rounded-full light-bg-color whitespace-nowrap dark-text-color">{language}</div>
+                                    <a key={index} href={language.link}>
+                                        <div className="expand-hover transition text-xs md:text-base px-3 md:px-4 py-2 rounded-full light-bg-color whitespace-nowrap dark-text-color">{language.name}</div>
+                                    </a>
                                 ))
                             }
                         </div>

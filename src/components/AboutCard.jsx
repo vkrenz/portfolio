@@ -27,7 +27,7 @@ const AboutCard = ({
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
             strings: [
-                'a <span class="medium-text-color">Student</span>',
+                'a <span class="medium-text-color">Graduate</span>',
                 'a <span class="medium-text-color">Banker</span>',
                 'a <span class="medium-text-color">Developer</span>',
                 `<span class="medium-text-color">${name.split(" ")[0]}</span> 👋`

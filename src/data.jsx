@@ -83,11 +83,30 @@ const data = {
                 "A feature-rich Airbnb clone showcasing CRUD, user authentication, search filters, interactive maps, and efficient media management, highlighting my expertise in building innovative web applications.",
             link: "https://project1-link.com",
             languages: [
-                "Typescript", 
-                "Next.js 13", 
-                "React", 
-                "MongoDB", 
-                "Tailwind CSS"
+                {
+                    name: "Typescript", 
+                    link: "https://www.typescriptlang.org/",
+
+                },
+                {
+                    name: "Next.js 13", 
+                    link: "https://nextjs.org/blog/next-13",
+
+                },
+                {
+                    name: "React", 
+                    link: "https://react.dev/",
+
+                },
+                {
+                    name: "MongoDB", 
+                    link: "https://www.mongodb.com/"
+
+                },
+                {
+                    name: "Tailwind CSS",
+                    link: "https://tailwindcss.com/"
+                },
             ],
         },
         {
@@ -109,9 +128,18 @@ const data = {
             description:
                 "A dynamic web app combining style and function. With dark mode, Google login, and real-time chat via Firebase, it elevates online conversations. User security ensures privacy. Chatalot reflects my commitment to creating engaging and secure web apps.",
             languages: [
-                "React", 
-                "Tailwind CSS", 
-                "Firebase"
+                {
+                    name: "React", 
+                    link: "https://react.dev/",
+                },
+                {
+                    name: "Tailwind CSS",
+                    link: "https://tailwindcss.com/",
+                },
+                {
+                    name: "Firebase",
+                    link: "https://firebase.google.com/",
+                },
             ],
         },
         {
@@ -132,9 +160,19 @@ const data = {
                 "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",
             link: "https://project2-link.com",
             languages: [
-                "React", 
-                "Next.js 13", 
-                "Bootstrap"
+                {
+                    name: "React", 
+                    link: "https://react.dev/",
+                },
+                {
+                    name: "Next.js 13", 
+                    link: "https://nextjs.org/blog/next-13",
+
+                },
+                {
+                    name: "Bootstrap",
+                    link: "https://getbootstrap.com/"
+                },
             ],
         },
     ],
