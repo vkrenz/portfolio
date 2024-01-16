@@ -7,9 +7,10 @@ import { Button } from 'flowbite-react';
 
 import { BsArrowRight } from 'react-icons/bs'
 import { LiaLinkSolid } from 'react-icons/lia'
-import { PiMapPinLineDuotone, PiBankDuotone } from 'react-icons/pi'
+import { PiBankDuotone } from 'react-icons/pi'
 
 import { useDarkMode } from '../DarkModeContext';
+import BaffleText from './BaffleText';
 
 const AboutCard = ({
     showPhotoSmallScreen = true,
@@ -101,10 +102,8 @@ const AboutCard = ({
                                     }}
                                 />
                             </div>
-                            <Button href="/about" className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} uppercase ${isDarkMode ? 'dark-text-color' : 'text-white'} w-full lg:w-52 p-2 rounded-2xl shadow-lg transition`}>
-                                <p>
-                                    More About Me
-                                </p>
+                            <Button href="/about" className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} uppercase ${isDarkMode ? 'dark-text-color' : 'text-white'} w-full lg:w-52 lg:max-h-14 lg:h-14 p-2 rounded-2xl shadow-lg transition`}>
+                                <BaffleText text="More About Me" />
                                 <BsArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                         </div>

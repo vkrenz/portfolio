@@ -3,6 +3,7 @@ import { PiHeartDuotone } from 'react-icons/pi'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 import { useDarkMode } from '../DarkModeContext'
+import BaffleText from './BaffleText'
 
 const Footer = () => {
     const { isDarkMode } = useDarkMode()
@@ -36,7 +37,7 @@ const Footer = () => {
                     `}
                 >
                     <FaGithubAlt className="w-5 h-5" /> 
-                    <p>Source Code</p>
+                    <BaffleText text="Source Code"/>
                 </a>
             </div>
             <div className="flex flex-col md:flex-row gap-3 w-full">

@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
+
 import data from '../data'
 
 import { Button } from 'flowbite-react';
@@ -7,6 +9,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import { PiCodeDuotone } from 'react-icons/pi'
 
 import { useDarkMode } from '../DarkModeContext';
+import BaffleText from './BaffleText';
 
 const WorkCard = ({
     displayProjects = data.projects.length
@@ -95,7 +98,7 @@ const WorkCard = ({
                 {projectsComponent}
                 <Button className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} w-full lg:w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>
                     <p className="uppercase">
-                        View All
+                        <BaffleText text="View All" />
                     </p>
                     <BsArrowRight className="ml-2 h-5 w-5" />
                 </Button>

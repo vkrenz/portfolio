@@ -18,9 +18,13 @@
 }
 
 body {
+    /* background-image: url('./assets/tile-background.jpeg');  Replace with the path to your tiling image */
+    /* background-repeat: repeat;  Set the background image to repeat */
+    /* filter: opacity(1) grayscale(0.3);  Adjust the opacity and grayscale values as needed */
     background-color: var(--extra-light-bg-color);
     transition: all ease-in-out 0.25s;
 }
+
 
 .dark-bg-color {
     background-color: var(--dark-bg-color);
