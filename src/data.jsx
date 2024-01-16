@@ -90,7 +90,7 @@ const data = {
 
                 },
                 {
-                    name: "Next.js 13", 
+                    name: "Next.js", 
                     link: "https://nextjs.org/blog/next-13",
 
                 },
@@ -166,7 +166,7 @@ const data = {
                     link: "https://react.dev/",
                 },
                 {
-                    name: "Next.js 13", 
+                    name: "Next.js", 
                     link: "https://nextjs.org/blog/next-13",
 
                 },
@@ -199,6 +199,75 @@ const data = {
             icon: "java-icon",
         },
     ],
+    experience: [
+        {
+            name: "React", 
+            link: "https://react.dev/",
+        },
+        {
+            name: "Tailwind CSS",
+            link: "https://tailwindcss.com/",
+        },
+        {
+            name: "Firebase",
+            link: "https://firebase.google.com/",
+        },
+        {
+            name: "Next.js", 
+            link: "https://nextjs.org/blog/next-13",
+
+        },
+        {
+            name: "Bootstrap",
+            link: "https://getbootstrap.com/"
+        },
+        {
+            name: "Typescript", 
+            link: "https://www.typescriptlang.org/",
+
+        },
+        {
+            name: "MongoDB", 
+            link: "https://www.mongodb.com/",
+
+        },
+        {
+            name: "Python",
+            link: "https://www.python.org/",
+        },
+        {
+            name: "Node.js",
+            link: "https://nodejs.org/en",
+        },
+        {
+            name: "jQuery",
+            link: "https://jquery.com/",
+        },
+        {
+            name: "Express.js",
+            link: "https://expressjs.com/",
+        },
+        {
+            name: "MySQL",
+            link: "https://www.mysql.com/",
+        },
+        {
+            name: "Oracle Database",
+            link: "https://www.oracle.com/ca-en/database/sqldeveloper/"
+        },
+        {
+            name: "Mongoose",
+            link: "https://mongoosejs.com/"
+        },
+        {
+            name: "Material UI",
+            link: "https://mui.com/",
+        },
+        {
+            name: "Shadcn/ui",
+            link: "https://ui.shadcn.com/"
+        }
+    ]
 };
 
 export default data;

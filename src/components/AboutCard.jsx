@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 import data from '../data'
@@ -61,18 +62,18 @@ const AboutCard = ({
 
     return (
         <div>
-            {
+            {/* {
                 showPhotoSmallScreen && (
                     <div className="block lg:hidden bg-neutral-600 w-full rounded-2xl mb-5"> 
                         <img src={photo} alt="Profile Picture" className="w-40 mx-auto rounded-2xl" />
                     </div>
                 )
-            }
+            } */}
             <div className="font-bold mb-5 lg:ms-7 text-center lg:text-left text-sm md:text-base">About Me</div>
-            <div className="flex md:flex-row flex-col gap-7">
+            <div className="flex md:flex-row flex-col gap-8">
                 <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full lg:w-1/2`}>
                     <div className="flex h-full ">
-                        <div className="w-full flex flex-col gap-7 text-center lg:text-left h-full justify-between items-center lg:items-start">
+                        <div className="w-full flex flex-col gap-8 text-center lg:text-left h-full justify-between items-center lg:items-start">
                             <div className={`${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base`}>
                                     <div className="flex items-center gap-3">
                                         <PiBankDuotone className="w-5 h-5" />

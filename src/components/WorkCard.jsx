@@ -71,11 +71,11 @@ const WorkCard = ({
                                 <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
                             </div>
                         </div>
-                        <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 mt-3 mb-3">
+                        <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 my-2">
                             {
                                 project.languages.map((language, index) => (
                                     <a key={index} href={language.link}>
-                                        <div className="expand-hover transition text-xs md:text-base px-3 md:px-4 py-2 rounded-full light-bg-color whitespace-nowrap dark-text-color">{language.name}</div>
+                                        <div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full light-bg-color whitespace-nowrap dark-text-color">{language.name}</div>
                                     </a>
                                 ))
                             }
