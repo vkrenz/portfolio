@@ -232,10 +232,6 @@ const data = {
 
         },
         {
-            name: "Python",
-            link: "https://www.python.org/",
-        },
-        {
             name: "Node.js",
             link: "https://nodejs.org/en",
         },
@@ -266,6 +262,10 @@ const data = {
         {
             name: "Shadcn/ui",
             link: "https://ui.shadcn.com/"
+        },
+        {
+            name: "Flowbite",
+            link: "https://flowbite.com/"
         }
     ]
 };

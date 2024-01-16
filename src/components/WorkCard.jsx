@@ -96,10 +96,8 @@ const WorkCard = ({
                     Projects
                 </div>
                 {projectsComponent}
-                <Button className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} w-full lg:w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>
-                    <p className="uppercase">
-                        <BaffleText text="View All" />
-                    </p>
+                <Button href="/work" className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} uppercase w-full lg:w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>
+                    <BaffleText text="View All" />
                     <BsArrowRight className="ml-2 h-5 w-5" />
                 </Button>
             </div> 

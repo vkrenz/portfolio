@@ -73,7 +73,7 @@ const AboutCardLarge = () => {
                                     </a>
                                 ))
                             }
-                            <div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color flex gap-3 leading-4">See more <BsArrowRight className="ml-1 h-4 w-4" /></div>
+                            <a href="/work"><div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color flex gap-3 leading-4">See more <BsArrowRight className="ml-1 h-4 w-4" /></div></a>
                         </div>
                     </div>
             </div>
