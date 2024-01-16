@@ -1,7 +1,11 @@
+import ContactForm from "../components/ContactForm";
+
 const Contact = () => {
     return (
         <div>
-            Contact Page
+            <div className="container mx-auto mt-8">
+                <ContactForm />
+            </div>
         </div>
     );
 }
