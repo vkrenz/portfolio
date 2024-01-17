@@ -48,6 +48,7 @@ const ContactForm = () => {
                             <div className="flex items-center gap-3">
                                 <AiTwotoneMail className="w-5 h-5" />
                                 <p className="uppercase">Let&apos;s work together</p>
+                                <p>🚧 WIP 🚧</p>
                             </div>
                     </div>
                     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
