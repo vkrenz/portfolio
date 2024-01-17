@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import PropTypes from 'prop-types';
-import NavbarComponent from './NavbarComponent';
+import NavbarComponent from './Navbar';
 import Footer from './Footer';
 
 import { useDarkMode } from '../DarkModeContext';

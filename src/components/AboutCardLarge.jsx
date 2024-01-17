@@ -40,7 +40,7 @@ const AboutCardLarge = () => {
                 </div>
             </div>
             <div className="flex gap-8">
-                <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3 mb-6`}> {/** Right Column */}
+                <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
                         <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center md:justify-start text-base`}>
                             <LiaLinkSolid className="h-5 w-5" />
                             Socials
@@ -60,7 +60,7 @@ const AboutCardLarge = () => {
                             ))}
                         </div>
                     </div>
-                    <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3 mb-6`}> {/** Right Column */}
+                    <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
                         <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center md:justify-start text-base`}>
                             <PiDevicesDuotone className="h-5 w-5" />
                             Experience

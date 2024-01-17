@@ -78,8 +78,8 @@ const Work = () => {
     ))
 
     return (
-        <div className="mb-14">
-            <div className="font-bold mb-5 lg:ms-7 text-center text-sm md:text-base">My Work</div>
+        <div>
+            <div className="font-bold mb-5 lg:ms-7 text-center md:text-left text-sm md:text-base">My Work</div>
             <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full`}>
                 <div className={`flex items-center justify-center md:justify-start gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-8`}>
                     <PiCodeDuotone className="h-5 w-5" />

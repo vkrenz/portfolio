@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PiMoonStarsDuotone, PiSunHorizonDuotone } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
-import { Navbar } from 'flowbite-react';
 
 import { useDarkMode } from '../DarkModeContext';
 
@@ -55,14 +54,14 @@ const NavbarComponent = () => {
             key={opt.hue}
             className={`${
                 activeHue === opt.hue
-                    ? `animate-bounce-custom transition border-2 ${isDarkMode ? 'border-neutral-100' : 'border-neutral-400'} rounded-full w-6 h-6 flex items-center justify-center`
+                    ? `animate-bounce-custom transition border-2 ${isDarkMode ? 'border-neutral-100' : 'border-neutral-400'} rounded-full w-5 h-5 flex items-center justify-center`
                     : ''
             }`}
         >
             <button
                 onClick={() => handleHueChange(opt.hue)}
                 className={`
-                    ${activeHue === opt.hue ? 'w-4 h-4' : 'w-6 h-6 mt-[6px]'}
+                    ${activeHue === opt.hue ? 'w-3 h-3' : 'w-5 h-5 mt-[6px]'}
                     ${opt.bgColor}
                     transition
                     expand-hover
@@ -85,14 +84,15 @@ const NavbarComponent = () => {
             key={index} 
             className={`
                 capitalize 
-                text-base 
+                text-sm
                 rounded-full
                 ${isDarkMode ? 'hover:bg-neutral-700' : 'hover:bg-neutral-100'}
                 w-full
+                text-center
+                py-2
                 px-5
-                py-3
                 transition
-                ${pathname === `/${option.toLowerCase()}` ? `font-semibold ${isDarkMode? 'medium-text-color' : 'dark-text-color'}` : ''}
+                ${pathname === `/${option.toLowerCase()}` ? `font-semibold ${isDarkMode? 'dark-text-color bg-neutral-300 hover:bg-neutral-300' : 'dark-text-color light-bg-color'}` : ''}
             `}
         >
             {option}
@@ -101,8 +101,8 @@ const NavbarComponent = () => {
 
     return (
         <div className="flex flex-col lg:flex-row w-full">
-            <div className="flex gap-3 my-14 w-full">
-                <Navbar 
+            <div className="flex gap-3 my-14 w-full max-h-[60px]">
+                <div
                     className={`
                         ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 
                         p-3 
@@ -112,36 +112,38 @@ const NavbarComponent = () => {
                         flex 
                         justify-center
                     `} 
-                rounded>
-                    <div className="md:ms-[40px] w-1/2 flex justify-around">
-                        {navOptions}
-                    </div>
-                    <div className="flex items-center gap-3 h-full">
-                        <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
-                            {renderHues}
+                >
+                    <div className="w-full flex justify-between mx-[5px]">
+                        <div className="w-1/2 flex justify-between gap-3">
+                            {navOptions}
                         </div>
-                        <div
-                            className={`
-                                ${isDarkMode ? 'bg-neutral-700' : 'extra-light-bg-color'}
-                                transition
-                                expand-hover
-                                cursor-pointer
-                                rounded-full
-                                lg:rounded-full
-                                flex items-center
-                                justify-center
-                                w-[45px]
-                                h-full
-                                text-2xl
-                            `}
-                            onClick={toggleDarkMode}
-                        >
-                            {isDarkMode ? <PiSunHorizonDuotone className="light-text-color" /> : <PiMoonStarsDuotone className="dark-text-color"/>}
+                        <div className="flex items-center gap-3 h-full">
+                            <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
+                                {renderHues}
+                            </div>
+                            <div
+                                className={`
+                                    ${isDarkMode ? 'bg-neutral-700' : 'extra-light-bg-color'}
+                                    transition
+                                    expand-hover
+                                    cursor-pointer
+                                    rounded-full
+                                    lg:rounded-full
+                                    flex items-center
+                                    justify-center
+                                    w-16
+                                    h-full
+                                    text-xl
+                                `}
+                                onClick={toggleDarkMode}
+                            >
+                                {isDarkMode ? <PiSunHorizonDuotone className="light-text-color" /> : <PiMoonStarsDuotone className="dark-text-color"/>}
+                            </div>
                         </div>
                     </div>
-                </Navbar>
+                </div>
             </div>
-            <div className="flex lg:hidden gap-5 mx-auto mb-7">
+            <div className="flex lg:hidden gap-5 mx-auto">
                 {renderHues}
             </div>
 
