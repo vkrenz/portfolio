@@ -16,10 +16,12 @@ import { FaGithubAlt } from 'react-icons/fa'
 
 import { MdOpenInNew } from 'react-icons/md'
 
+import pfpImage from './assets/pfp.png';
+
 const data = {
     name: "Victor Krenzel",
     description: "I'm a tech enthusiast, driven by curiosity and creativity, passionate about problem-solving and continuous learning.",
-    photo: "https://i.imgur.com/udGR1n7.png",
+    photo: pfpImage,
     contact: {
         company: "Scotiabank",
         email: "vkrenzel@outlook.com",
