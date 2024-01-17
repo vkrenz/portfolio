@@ -113,7 +113,7 @@ const NavbarComponent = () => {
                         justify-center
                     `} 
                 >
-                    <div className="w-full flex justify-between mx-[5px]">
+                    <div className="w-full flex justify-between mx-[3px]">
                         <div className="w-1/2 flex justify-between gap-3">
                             {navOptions}
                         </div>
