@@ -34,14 +34,14 @@ const AboutCardLarge = () => {
                     <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
                         a <span className="medium-text-color underline-extra-light-color"> Software Developer</span> based in Toronto,
                     </div>
-                    <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
+                    <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg text-center`}>
                         Enthusiastic about delivering high-quality <span className="underline-medium-color">applications</span>.
                     </div>
                 </div>
             </div>
             <div className="flex gap-8">
                 <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
-                        <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center md:justify-start text-base`}>
+                        <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center lg:justify-start text-base`}>
                             <LiaLinkSolid className="h-5 w-5" />
                             Socials
                         </div>
@@ -61,15 +61,15 @@ const AboutCardLarge = () => {
                         </div>
                     </div>
                     <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
-                        <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center md:justify-start text-base`}>
+                        <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center lg:justify-start text-base`}>
                             <PiDevicesDuotone className="h-5 w-5" />
                             Experience
                         </div>
-                        <div className="flex items-start justify-center md:justify-start flex-wrap gap-3">
+                        <div className="flex items-start justify-center lg:justify-start flex-wrap gap-3">
                             {
                                 experience.map((exp, index) => (
                                     <a key={index} href={exp.link}>
-                                        <div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full bg-neutral-700 whitespace-nowrap light-text-color">{exp.name}</div>
+                                        <div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full bg-neutral-700 whitespace-nowrap light-text-color w-100">{exp.name}</div>
                                     </a>
                                 ))
                             }
