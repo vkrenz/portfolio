@@ -269,7 +269,26 @@ const data = {
             name: "Flowbite",
             link: "https://flowbite.com/"
         }
-    ]
+    ],
+    resume: {
+        name: {
+            firstName: "Victor",
+            lastName: "Krenzel"
+        },
+        location: "Toronto, ON",
+        postalCode: "M2R",
+        phone: "+1 (647) 568-6382",
+        email: "vkrenzel@outlook.com",
+        linkedin: "linkedin.com/in/vkrenz",
+        education: [
+            {
+
+            },
+            {
+
+            },
+        ]
+    }
 };
 
 export default data;

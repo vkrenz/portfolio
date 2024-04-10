@@ -106,9 +106,8 @@ const NavbarComponent = () => {
                     className={`
                         ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} 
                         p-3 
-                        rounded-2xl 
-                        lg:rounded-full 
-                        w-full 
+                        rounded-full
+                        w-full
                         flex 
                         justify-center
                     `} 
@@ -143,7 +142,8 @@ const NavbarComponent = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex lg:hidden gap-5 mx-auto">
+
+            <div className={`flex lg:hidden gap-5 mx-auto mb-14 px-4 py-2 rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
                 {renderHues}
             </div>
 
