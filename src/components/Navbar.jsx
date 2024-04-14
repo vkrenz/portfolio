@@ -84,13 +84,16 @@ const NavbarComponent = () => {
             key={index} 
             className={`
                 capitalize 
-                text-sm
+                text-xs
+                lg:text-sm
+                font-normal
                 rounded-full
                 ${isDarkMode ? 'hover:bg-neutral-700' : 'hover:bg-neutral-100'}
                 w-full
                 text-center
+                px-2
                 py-2
-                px-5
+                lg:px-5
                 transition
                 ${pathname === `/${option.toLowerCase()}` ? `font-semibold ${isDarkMode? 'dark-text-color bg-neutral-300 hover:bg-neutral-300' : 'dark-text-color light-bg-color'}` : ''}
             `}
@@ -113,11 +116,11 @@ const NavbarComponent = () => {
                     `} 
                 >
                     <div className="w-full flex justify-between mx-[3px]">
-                        <div className="w-1/2 flex justify-between gap-3">
+                        <div className="w-full lg:w-1/2 flex justify-between lg:gap-3">
                             {navOptions}
                         </div>
                         <div className="flex items-center gap-3 h-full">
-                            <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
+                            <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'extra-light-bg-color'}`}>
                                 {renderHues}
                             </div>
                             <div
@@ -128,7 +131,9 @@ const NavbarComponent = () => {
                                     cursor-pointer
                                     rounded-full
                                     lg:rounded-full
-                                    flex items-center
+                                    hidden
+                                    lg:flex 
+                                    items-center
                                     justify-center
                                     w-16
                                     h-full
@@ -142,11 +147,33 @@ const NavbarComponent = () => {
                     </div>
                 </div>
             </div>
-
-            <div className={`flex lg:hidden gap-5 mx-auto mb-14 px-4 py-2 rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
-                {renderHues}
+            <div className={`flex lg:hidden mb-14 ${isDarkMode ? 'bg-neutral-600' : ''} p-3 rounded-full mx-auto`}>
+                <div className="flex items-center justify-center gap-3 h-[40px]">
+                    <div className={`flex lg:hidden gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
+                        {renderHues}
+                    </div>
+                    <div
+                        className={`
+                            ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}
+                            transition
+                            expand-hover
+                            cursor-pointer
+                            rounded-full
+                            lg:rounded-full
+                            flex 
+                            lg:hidden
+                            items-center
+                            justify-center
+                            w-[116px]
+                            h-full
+                            text-xl
+                        `}
+                        onClick={toggleDarkMode}
+                    >
+                        {isDarkMode ? <PiSunHorizonDuotone className="light-text-color" /> : <PiMoonStarsDuotone className="dark-text-color"/>}
+                    </div>
+                </div>
             </div>
-
         </div>
     );
 }
