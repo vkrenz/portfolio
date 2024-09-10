@@ -93,12 +93,12 @@ const ContactForm = () => {
                             <ErrorMessage name="email" component="div" className="text-white bg-red-500  w-full rounded-xl my-5 p-5 text-center" />
                             <ErrorMessage name="message" component="div" className="text-white bg-red-500 w-full rounded-xl my-5 p-5 text-center" />
                         </div>
+                        <div className="flex items-center justify-center text-xs italic">
+                            <p className="text-sky-500">✨ Form doesn&apos;t work yet - Coming to a contact form near you! ✨</p>
+                        </div>
                         <button type="submit" className="medium-bg-color text-white px-4 rounded-2xl p-5 w-full mt-5">
                             Submit
                         </button>
-                        <div className="flex items-center justify-center mt-5">
-                            <p className="text-sky-500">Form doesn&apos;t work yet</p>
-                        </div>
                     </Form>
                     </Formik>
                 </div>
