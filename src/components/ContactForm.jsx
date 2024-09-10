@@ -1,5 +1,7 @@
 import data from '../data'
 
+import CustomInputField from './CustomInputField';
+
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { useDarkMode } from '../DarkModeContext';
 import * as Yup from 'yup';
@@ -27,9 +29,9 @@ const ContactForm = () => {
     const newSocials = splitSocials(socials)
 
     const validationSchema = Yup.object({
-        name: Yup.string().required('Name is required'),
-        email: Yup.string().email('Invalid email address').required('Email is required'),
-        message: Yup.string().required('Message is required'),
+        name: Yup.string().required('A Name is required'),
+        email: Yup.string().email('Invalid email address').required('An Email is required'),
+        message: Yup.string().required('A Message is required'),
     });
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -48,29 +50,55 @@ const ContactForm = () => {
                             <div className="flex items-center gap-3">
                                 <AiTwotoneMail className="w-5 h-5" />
                                 <p className="uppercase">Let&apos;s work together</p>
-                                <p>🚧 WIP 🚧</p>
+                                {/* <p>🚧 WIP 🚧</p> */}
                             </div>
                     </div>
                     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
                     <Form className="w-full mx-end" action="YOUR_FORMSPREE_OR_NETLIFY_FORMS_URL">
-                        <div className="mb-4">
-                            <label htmlFor="name">Name</label>
-                            <Field type="text" id="name" name="name" className="form-input w-full" />
-                            <ErrorMessage name="name" component="div" className="text-red-500" />
+                        <div className="flex gap-8 items-center">
+                            <div className="mb-4 w-full">
+                                <CustomInputField 
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder={"What's your name?"
+                                }/>
+                                {/* <label htmlFor="name">Name</label>
+                                <Field type="text" id="name" name="name" className="form-input w-full rounded-2xl" /> */}
+                            </div>
+                            <div className="mb-4 w-full">
+                                <CustomInputField 
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder={"What's your email?"
+                                }/>
+                                {/* <label htmlFor="email">Email</label>
+                                <Field type="email" id="email" name="email" className="form-input w-full rounded-2xl" /> */}
+                            </div>
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="email">Email</label>
-                            <Field type="email" id="email" name="email" className="form-input w-full" />
-                            <ErrorMessage name="email" component="div" className="text-red-500" />
+                            {/* <label htmlFor="message">Message</label>
+                            <Field as="textarea" id="message" name="message" className="form-input w-full rounded-2xl" /> */}
+                            <CustomInputField 
+                                    as="textArea"
+                                    type="textArea"
+                                    id="email"
+                                    name="email"
+                                    placeholder={"Feel free to drop a message!"
+                            }/>
                         </div>
-                        <div className="mb-4">
-                            <label htmlFor="message">Message</label>
-                            <Field as="textarea" id="message" name="message" className="form-input w-full" />
-                            <ErrorMessage name="message" component="div" className="text-red-500" />
+                        <div className="flex gap-8 items-center">
+                            <ErrorMessage name="name" component="div" className="text-white bg-red-500  w-full rounded-xl my-5 p-5 text-center" />
+                            <ErrorMessage name="email" component="div" className="text-white bg-red-500  w-full rounded-xl my-5 p-5 text-center" />
+                            <ErrorMessage name="message" component="div" className="text-white bg-red-500 w-full rounded-xl my-5 p-5 text-center" />
                         </div>
-                        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded w-full">
+                        <button type="submit" className="medium-bg-color text-white px-4 rounded-2xl p-5 w-full mt-5">
                             Submit
                         </button>
+                        <div className="flex items-center justify-center mt-5">
+                            <p className="text-sky-500">Form doesn&apos;t work yet</p>
+                        </div>
                     </Form>
                     </Formik>
                 </div>
