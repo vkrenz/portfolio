@@ -75,7 +75,7 @@ const WorkCard = ({
                             {
                                 project.languages.map((language, index) => (
                                     <a key={index} href={language.link}>
-                                        <div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full light-bg-color whitespace-nowrap dark-text-color">{language.name}</div>
+                                        <div className={`expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} whitespace-nowrap ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>{language.name}</div>
                                     </a>
                                 ))
                             }

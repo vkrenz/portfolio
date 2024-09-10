@@ -10,6 +10,11 @@ import { useDarkMode } from '../DarkModeContext';
 const NavbarComponent = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode()
 
+    // To-be changed (eventually)
+    const showBlog = false
+    const showResume = false
+    const showContact = true
+
     console.info(`(NavbarComponent.jsx): Dark Mode: ${isDarkMode}`)
 
     const [activeHue, setActiveHue] = useState(190); // State variable to store the active hue
@@ -29,9 +34,9 @@ const NavbarComponent = () => {
         'Home',
         'About', 
         'Work', 
-        'Resume', 
-        'Blog', 
-        'Contact',
+        ...(showResume ? ['Resume'] : []), 
+        ...(showBlog ? ['Blog'] : []), 
+        ...(showContact ? ['Contact'] : []),
     ];
 
     const hueOpts = [

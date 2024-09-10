@@ -88,7 +88,7 @@ const AboutCard = ({
                                     <PiBriefcaseDuotone className="w-5 h-5" />
                                     {contact.company}
                             </div> */}
-                            <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
+                            <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : ''} text-lg`}>
                                 <div className="flex gap-2 justify-center md:justify-start">
                                     Hey, I&apos;m
                                     <span ref={typedRef}></span>
