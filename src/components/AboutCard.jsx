@@ -76,7 +76,7 @@ const AboutCard = ({
                             <div className={`${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold flex gap-3 items-center justify-center md:justify-start text-base`}>
                                     <div className="flex items-center gap-3">
                                         <PiBankDuotone className="w-5 h-5" />
-                                        {contact.company}
+                                        <BaffleText text={contact.company} />
                                     </div>
                                     &middot;
                                     <div className="flex items-center gap-3 text-neutral-400">

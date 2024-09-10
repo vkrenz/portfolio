@@ -1,8 +1,13 @@
 import data from '../data'
 
 import { PiCodeDuotone } from 'react-icons/pi'
+import { BsArrowRight } from 'react-icons/bs'
 
 import { useDarkMode } from '../DarkModeContext';
+
+import { Button } from 'flowbite-react';
+
+import BaffleText from '../components/BaffleText';
 
 const Work = () => {
 
@@ -29,7 +34,7 @@ const Work = () => {
                                                 {project.imageIcon}
                                             </span>
                                             <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
-                                                {project.name}
+                                                <BaffleText text={project.name} />
                                             </span>
                                             <span className="text-neutral-400 ms-auto flex md:hidden">
                                                 {project.dateYear}
@@ -71,7 +76,8 @@ const Work = () => {
                                 ))
                             }
                         </div>
-                        { index != projects.length -1 ? <hr /> : '' }
+                        <hr />
+                        {/* { index != projects.length -1 ? <hr /> : '' } */}
                     </div>
                 </div>
         </div>
@@ -86,6 +92,10 @@ const Work = () => {
                     Projects
                 </div>
                 {projectsComponent}
+                <Button href="https://github.com/vkrenz" className={`expand-hover ${isDarkMode ? 'light-bg-color' : 'medium-bg-color'} uppercase w-full lg:w-52 p-2 rounded-2xl shadow-lg mt-7 ms-auto ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>
+                    <BaffleText text="My Github" />
+                    <BsArrowRight className="ml-2 h-5 w-5" />
+                </Button>
             </div> 
         </div>
     );

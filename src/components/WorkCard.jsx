@@ -38,7 +38,7 @@ const WorkCard = ({
                                                 {project.imageIcon}
                                             </span>
                                             <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
-                                                {project.name}
+                                                <BaffleText text={project.name} />
                                             </span>
                                             <span className="text-neutral-400 ms-auto flex md:hidden">
                                                 {project.dateYear}

@@ -5,8 +5,8 @@ import { useDarkMode } from '../DarkModeContext';
 const Resume = () => {
     return (
         <div className="mx-auto">
-            <div className="text-center mb-10">
-                <h1 className="text-4xl font-bold">VICTOR KRENZEL</h1>
+            <div className="text-center mb-10 bg-white rounded-3xl p-10">
+                <h1 className="text-4xl font-semibold">VICTOR KRENZEL</h1>
                 {/* Divider */}
                 <hr className="border-t-2 border-gray-300 my-10" />
                 <div className="flex justify-center items-center">
@@ -25,20 +25,22 @@ const Resume = () => {
             </div>
 
             {/* Education Section */}
-            <section className="mb-10">
-                <h2 className="text-2xl font-semibold mb-4">EDUCATION</h2>
-                <div className="mb-6 flex items-center justify-between">
-                    <p className="font-bold">Ontario College Diploma, Computer Programming | Seneca College, Toronto ON</p>
-                    <p><span className="italic">12/2023</span></p>
-                </div>
+            <section className="mb-10 p-10 rounded-3xl bg-white">
+                <h2 className="text-2xl font-semibold mb-4 text-center">EDUCATION</h2>
+                    <div className="mb-6 flex items-center justify-between">
+                        <p className="font-semibold">Ontario College Diploma, Computer Programming | <span className="font-regular opacity-50">Seneca College, Toronto ON</span></p>
+                        <p><span className="italic">12/2023</span></p>
+                    </div>
                 <div>
-                    <p className="font-bold">CyberArts, Ontario High School Diploma</p>
-                    <p>Northview Heights Secondary School, Toronto ON | <span className="italic">06/2017</span></p>
+                    <div className=" flex items-center justify-between">
+                        <p className="font-semibold">CyberArts, Ontario High School Diploma | <span className="font-regular opacity-50">Northview Heights Secondary School, Toronto ON</span></p>
+                        <p><span className="italic">06/2017</span></p>
+                    </div>
                 </div>
             </section>
 
             {/* Technical Skills Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-10 rounded-3xl bg-white">
                 <h2 className="text-2xl font-semibold mb-4">TECHNICAL SKILLS</h2>
                 <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Programming Languages:</strong> JavaScript, TypeScript, Java, Python, C/C++, C#</li>
@@ -50,7 +52,7 @@ const Resume = () => {
             </section>
 
             {/* Work Experience Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-10 rounded-3xl bg-white">
                 <h2 className="text-2xl font-semibold mb-4">WORK EXPERIENCE</h2>
                 <div className="mb-6">
                     <p className="font-bold">Customer Experience Associate</p>
@@ -78,7 +80,7 @@ const Resume = () => {
             </section>
 
             {/* Projects Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-10 rounded-3xl bg-white">
                 <h2 className="text-2xl font-semibold mb-4">PROJECTS</h2>
                 <div className="mb-6">
                     <p className="font-bold">Portfolio</p>

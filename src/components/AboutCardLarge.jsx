@@ -34,8 +34,8 @@ const AboutCardLarge = () => {
                     <div className={`text-center md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
                         a <span className="medium-text-color underline-extra-light-color"> Software Developer</span> based in Toronto,
                     </div>
-                    <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg text-center`}>
-                        Enthusiastic about delivering high-quality <span className="underline-medium-color">applications</span>.
+                    <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg text-center flex gap-2`}>
+                        Enthusiastic about delivering high-quality <span className="underline-medium-color"><BaffleText text="applications" /></span>.
                     </div>
                 </div>
             </div>
