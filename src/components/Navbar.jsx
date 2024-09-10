@@ -12,7 +12,7 @@ const NavbarComponent = () => {
 
     // To-be changed (eventually)
     const showBlog = false
-    const showResume = false
+    const showResume = true
     const showContact = true
 
     console.info(`(NavbarComponent.jsx): Dark Mode: ${isDarkMode}`)

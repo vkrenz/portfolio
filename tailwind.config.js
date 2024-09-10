@@ -8,7 +8,11 @@ export default {
       "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['Georgia', 'Times New Roman', 'serif'],
+      }
+    },
   },
   plugins: [
     flowbitePlugin
