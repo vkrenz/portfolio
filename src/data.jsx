@@ -5,7 +5,7 @@ import {
     PiGithubLogoDuotone,
     PiCodepenLogoDuotone,
     PiDiscordLogoDuotone,
-    PiChatCenteredTextDuotone,
+    PiGlobeHemisphereWestDuotone,
 } from 'react-icons/pi'
 
 import { GiClothes } from 'react-icons/gi'
@@ -69,7 +69,42 @@ const data = {
     ],
     projects: [
         {
+            name: "Portfolio",
+            link: 'https://vkrenzel.vercel.app/home',
+            githubLink: 'https://github.com/vkrenz/portfolio',
+            dateYear: "2023",
+            imageIcon: <PiGlobeHemisphereWestDuotone />,
+            headerIcons: [
+                {
+                    icon: <FaGithubAlt key="github"/>,
+                    link: 'https://github.com/vkrenz/chatalot-app',
+                },
+                {
+                    icon: <MdOpenInNew key="open" />,
+                    link: 'https://vkrenz.github.io/chatalot-app/',
+                },
+            ],
+            description:
+                "A responsive portfolio built with React and Tailwind CSS to showcase my projects and skills. Includes dark mode, dynamic color themes, and an easily customizable structure.",
+            languages: [
+                {
+                    name: "React", 
+                    link: "https://react.dev/",
+                },
+                {
+                    name: "Tailwind CSS",
+                    link: "https://tailwindcss.com/",
+                },
+                {
+                    name: "Firebase",
+                    link: "https://firebase.google.com/",
+                },
+            ],
+        },
+        {
             name: "Airbnb Clone",
+            link: 'https://bnb-nu.vercel.app/',
+            githubLink: 'https://github.com/vkrenz/airbnb-clone',
             dateYear: "2023",
             imageIcon: <TbBrandAirbnb />,
             headerIcons: [
@@ -84,7 +119,6 @@ const data = {
             ],
             description:
                 "A feature-rich Airbnb clone showcasing CRUD, user authentication, search filters, interactive maps, and efficient media management, highlighting my expertise in building innovative web applications.",
-            link: "https://project1-link.com",
             languages: [
                 {
                     name: "Typescript", 
@@ -113,11 +147,9 @@ const data = {
             ],
         },
         {
-            name: "Chatalot",
-            link: '',
-            githubLink: 'https://github.com/vkrenz/chatalot-app',
-            dateYear: "2022",
-            imageIcon: <PiChatCenteredTextDuotone />,
+            name: "Twitter clone",
+            dateYear: "2024",
+            imageIcon: <PiTwitterLogoDuotone />,
             headerIcons: [
                 {
                     icon: <FaGithubAlt key="github"/>,
@@ -129,38 +161,7 @@ const data = {
                 },
             ],
             description:
-                "A dynamic web app combining style and function. With dark mode, Google login, and real-time chat via Firebase, it elevates online conversations. User security ensures privacy. Chatalot reflects my commitment to creating engaging and secure web apps.",
-            languages: [
-                {
-                    name: "React", 
-                    link: "https://react.dev/",
-                },
-                {
-                    name: "Tailwind CSS",
-                    link: "https://tailwindcss.com/",
-                },
-                {
-                    name: "Firebase",
-                    link: "https://firebase.google.com/",
-                },
-            ],
-        },
-        {
-            name: "EssentiaMarket",
-            dateYear: "2023",
-            imageIcon: <GiClothes />,
-            headerIcons: [
-                {
-                    icon: <FaGithubAlt key="github"/>,
-                    link: 'https://github.com/vkrenz/chatalot-app',
-                },
-                {
-                    icon: <MdOpenInNew key="open" />,
-                    link: 'https://vkrenz.github.io/chatalot-app/',
-                },
-            ],
-            description:
-                "EssentiaMarket is an engaging web application built with Next.js and React, enhanced with Bootstrap. It offers seamless page navigation and dynamic data retrieval from an API, making it an intuitive and interactive platform for exploring an online marketplace.",
+                "An iOS Twitter-clone app built with Xcode, Swift UI, and Firebase. Features include user authentication, real-time tweets, likes, comments, following, and media uploads.",
             link: "https://project2-link.com",
             languages: [
                 {
