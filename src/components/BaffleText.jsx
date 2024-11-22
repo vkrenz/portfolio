@@ -7,6 +7,8 @@ import baffle from 'baffle';
 const BaffleText = ({ text }) => {
   const baffleRef = useRef(null);
 
+  const disableBaffle = true
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -40,7 +42,7 @@ const BaffleText = ({ text }) => {
     };
   }, [text]);
 
-  return <p ref={baffleRef} className="baffle">{text}</p>;
+  return disableBaffle ? text : <p ref={baffleRef} className="baffle">{text}</p>;
 };
 
 export default BaffleText;
