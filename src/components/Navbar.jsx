@@ -152,6 +152,8 @@ const NavbarComponent = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Small Screen - Hue Options */}
             <div className={`flex lg:hidden mb-14 ${isDarkMode ? 'bg-neutral-600' : ''} p-3 rounded-full mx-auto`}>
                 <div className="flex items-center justify-center gap-3 h-[40px]">
                     <div className={`flex lg:hidden gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'bg-white'}`}>
@@ -179,6 +181,7 @@ const NavbarComponent = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }

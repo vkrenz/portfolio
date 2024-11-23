@@ -34,12 +34,12 @@ const AboutCardLarge = () => {
                     <div className={`text-center md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
                         a <span className="medium-text-color underline-extra-light-color"> Software Developer</span> based in Toronto,
                     </div>
-                    <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg text-center flex gap-2`}>
-                        Enthusiastic about delivering high-quality <span className="underline-medium-color"><BaffleText text="applications" /></span>.
+                    <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg text-center flex gap-2 flex-wrap items-center justify-center`}>
+                        Enthusiastic about delivering high-quality&nbsp;<span className="underline-medium-color"><BaffleText text="applications" /></span>.
                     </div>
                 </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-8 flex-col lg:flex-row">
                 <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
                         <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center lg:justify-start text-base`}>
                             <LiaLinkSolid className="h-5 w-5" />
