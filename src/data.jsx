@@ -148,6 +148,8 @@ const data = {
         },
         {
             name: "Twitter clone",
+            link: '',
+            githubLink: 'https://github.com/vkrenz/twitter-clone',
             dateYear: "2024",
             imageIcon: <PiTwitterLogoDuotone />,
             headerIcons: [
@@ -162,7 +164,6 @@ const data = {
             ],
             description:
                 "An iOS Twitter-clone app built with Xcode, Swift UI, and Firebase. Features include user authentication, real-time tweets, likes, comments, following, and media uploads.",
-            link: "https://project2-link.com",
             languages: [
                 {
                     name: "React", 
