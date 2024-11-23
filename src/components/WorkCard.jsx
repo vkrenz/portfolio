@@ -34,17 +34,21 @@ const WorkCard = ({
                             </div>
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
                                 <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center">
-                                    <div className="flex justify-center w-full md:justify-start">
+                                    <div className="flex w-full">
                                         <div className="font-semibold text-md flex gap-3 items-center">
-                                            <span className="flex lg:hidden text-2xl">
-                                                {project.imageIcon}
-                                            </span>
-                                            <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
-                                                <BaffleText text={project.name} />
-                                            </span>
-                                            <span className="text-neutral-400 ms-auto flex md:hidden">
-                                                {project.dateYear}
-                                            </span>
+                                            <div className="flex items-center justify-around">
+                                                <div className="flex items-center gap-1">
+                                                    <span className="flex lg:hidden text-2xl">
+                                                        {project.imageIcon}
+                                                    </span>
+                                                    <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
+                                                        <BaffleText text={project.name} />
+                                                    </span>
+                                                </div>
+                                                <span className="text-neutral-400 ms-auto flex md:hidden">
+                                                    {project.dateYear}
+                                                </span>
+                                            </div>
 
                                             {/* External Project Links @ Large Screen*/}
                                             <div className="gap-2 hidden md:flex items-center">
@@ -73,7 +77,7 @@ const WorkCard = ({
                                     </div>
 
                                     {/* External Project Links @ Small Screen*/}
-                                    <div className="gap-2 flex md:hidden mx-auto">
+                                    <div className="gap-2 flex md:hidden lg:mx-auto">
                                         <div className="gap-2 flex items-center text-sm">
                                             <a href={project.githubLink}>Github Repo</a>
                                             <FiGithub className="text-xl"/>
@@ -92,10 +96,10 @@ const WorkCard = ({
                                     </div>
 
                                 </div>
-                                <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
+                                <p className="text-sm md:text-md">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
                             </div>
                         </div>
-                        <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 my-2">
+                        <div className="flex items-start flex-wrap gap-3 my-2">
                             {
                                 project.languages.map((language, index) => (
                                     <a key={index} href={language.link}>
