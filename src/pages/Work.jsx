@@ -64,15 +64,26 @@ const Work = () => {
                                             {project.dateYear}
                                         </span>
                                     </div>
+
+                                    {/* External Project Links @ Small Screen*/}
                                     <div className="gap-2 flex md:hidden mx-auto">
+                                        <div className="gap-2 flex items-center text-sm">
+                                            <a href={project.githubLink}>Github Repo</a>
+                                            <FiGithub className="text-xl"/>
+                                        </div>
                                         {
-                                            project.headerIcons.map((item, index) => (
-                                                <a key={index} href={item.link} className="text-2xl">
-                                                    {item.icon}
-                                                </a>
-                                            ))
+                                            project.link && (
+                                                <>
+                                                    <div>&middot;</div>
+                                                    <div className="gap-2 flex items-center text-sm">
+                                                        <a href={project.link}>Live Demo</a>
+                                                        <BiLinkExternal className="text-xl"/>
+                                                    </div>
+                                                </>
+                                            )
                                         }
                                     </div>
+                                    
                                 </div>
                                 <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
                             </div>
