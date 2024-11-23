@@ -1,13 +1,18 @@
 'use client'
 
+// React Imports
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { PiMoonStarsDuotone, PiSunHorizonDuotone } from 'react-icons/pi'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
 
+// React-Icons Imports
+import { PiMoonStarsDuotone, PiSunHorizonDuotone } from 'react-icons/pi'
+
+// Dark Mode Import
 import { useDarkMode } from '../DarkModeContext';
 
 const NavbarComponent = () => {
+
+    // Dark Mode State
     const { isDarkMode, toggleDarkMode } = useDarkMode()
 
     // To-be changed (eventually)
@@ -15,9 +20,9 @@ const NavbarComponent = () => {
     const showResume = false
     const showContact = false
 
-    console.info(`(NavbarComponent.jsx): Dark Mode: ${isDarkMode}`)
-
-    const [activeHue, setActiveHue] = useState(190); // State variable to store the active hue
+    // Active Hue State
+    // Default: 190 (Cyan)
+    const [activeHue, setActiveHue] = useState(190)
 
     function useRouter() {
         const location = useLocation();
@@ -30,15 +35,18 @@ const NavbarComponent = () => {
 
     const { pathname } = useRouter()
 
+    // Navbar Options
     const options = [
         'Home',
         'About', 
         'Work', 
+        // /resume, /blog, /contact are WIP (11/2024)
         ...(showResume ? ['Resume'] : []), 
         ...(showBlog ? ['Blog'] : []), 
         ...(showContact ? ['Contact'] : []),
     ];
 
+    // All Possible Hue Options
     const hueOpts = [
         {
             hue: 190,
@@ -54,6 +62,7 @@ const NavbarComponent = () => {
         },
     ]
 
+    // Renders all the @hueOpts
     const renderHues = hueOpts.map(opt => (
         <div
             key={opt.hue}
@@ -79,10 +88,12 @@ const NavbarComponent = () => {
     ))
 
     const handleHueChange = (newHue) => {
-        setActiveHue(newHue); // Set the active hue
+        setActiveHue(newHue);
+        // --global-hue is in :root @ ../../index.css
         document.documentElement.style.setProperty('--global-hue', newHue);
     };
 
+    // Render all @options in the navbar
     const navOptions = options.map((option, index) => (
         <Link 
             to={`/${option.toLowerCase()}`} 
@@ -121,9 +132,13 @@ const NavbarComponent = () => {
                     `} 
                 >
                     <div className="w-full flex justify-between mx-[3px]">
+
+                        {/* Render all @navOptions */}
                         <div className="w-full lg:w-1/2 flex justify-between lg:gap-3">
                             {navOptions}
                         </div>
+
+                        {/* Render all @hueOpts */}
                         <div className="flex items-center gap-3 h-full">
                             <div className={`hidden lg:flex gap-3 items-center justify-center px-4 py-1 h-full rounded-full ${isDarkMode ? 'bg-neutral-700' : 'extra-light-bg-color'}`}>
                                 {renderHues}
@@ -149,6 +164,7 @@ const NavbarComponent = () => {
                                 {isDarkMode ? <PiSunHorizonDuotone className="light-text-color" /> : <PiMoonStarsDuotone className="dark-text-color"/>}
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
