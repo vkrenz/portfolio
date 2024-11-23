@@ -25,22 +25,33 @@ const Work = () => {
                 <div key={index} className="flex flex-col w-full mt-5"> {/** Projects Container */}
                     <div className="flex flex-col gap-3">
                         <div className="flex lg:gap-7">
+
+                            {/* Project Icon @ Large Screen */}
                             <div className={`transition rounded-2xl w-0 lg:w-28 lg:h-24 hidden lg:flex items-center justify-center ${isDarkMode ? 'extra-light-bg-color' : 'dark-bg-color'} shadow-lg`}>
                                 <div key={index} className={`text-5xl ${isDarkMode ? 'dark-text-color' : 'text-white'}`}>{project.imageIcon}</div>
                             </div>
+
                             <div className="w-full flex flex-col gap-3 lg:max-h-24 justify-around">
                                 <div className="flex flex-col lg:flex-row gap-3 items-start lg:items-center">
                                     <div className="flex justify-center w-full md:justify-start">
                                         <div className="font-semibold text-md flex gap-3 items-center">
+
+                                            {/* Project Icon @ Small Screen */}
                                             <span className="flex lg:hidden text-2xl">
                                                 {project.imageIcon}
                                             </span>
+
+                                            {/* Project Name */}
                                             <span className={`${isDarkMode ? 'light-text-color' : 'dark-text-color'} ms-1`}>
                                                 <BaffleText text={project.name} />
                                             </span>
+
+                                            {/* Project Year @ Small Screen */}
                                             <span className="text-neutral-400 ms-auto flex md:hidden">
-                                                {project.dateYear}
+                                                    {project.dateYear}
                                             </span>
+                                            
+                                            {/* External Project Links @ Large Screen*/}
                                             <div className="gap-2 hidden md:flex items-center">
                                                 <div>&middot;</div>
                                                 <div className="gap-2 flex items-center">
@@ -59,7 +70,9 @@ const Work = () => {
                                                     )
                                                 }
                                             </div>
+
                                         </div>
+
                                         <span className="text-neutral-400 ms-auto hidden md:flex">
                                             {project.dateYear}
                                         </span>
@@ -85,9 +98,14 @@ const Work = () => {
                                     </div>
                                     
                                 </div>
+
+                                {/* Project Description */}
                                 <p className="text-sm md:text-md text-center md:text-left">{project.description} <a href={`/project/${project.name}`} className={`${isDarkMode ? 'medium-text-color' : 'dark-text-color'} font-semibold`}>Learn More</a></p> 
+                            
                             </div>
                         </div>
+
+                        {/* Project Languages */}
                         <div className="flex items-start justify-center md:justify-start flex-wrap gap-3 my-2">
                             {
                                 project.languages.map((language, index) => (
@@ -97,8 +115,8 @@ const Work = () => {
                                 ))
                             }
                         </div>
+
                         <hr />
-                        {/* { index != projects.length -1 ? <hr /> : '' } */}
                     </div>
                 </div>
         </div>
