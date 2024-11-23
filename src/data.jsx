@@ -166,17 +166,17 @@ const data = {
                 "An iOS Twitter-clone app built with Xcode, Swift UI, and Firebase. Features include user authentication, real-time tweets, likes, comments, following, and media uploads.",
             languages: [
                 {
-                    name: "React", 
-                    link: "https://react.dev/",
+                    name: "SwiftUI", 
+                    link: "https://developer.apple.com/xcode/swiftui/",
                 },
                 {
-                    name: "Next.js", 
-                    link: "https://nextjs.org/blog/next-13",
+                    name: "XCode", 
+                    link: "https://developer.apple.com/xcode/",
 
                 },
                 {
-                    name: "Bootstrap",
-                    link: "https://getbootstrap.com/"
+                    name: "Firebase",
+                    link: "https://firebase.google.com/"
                 },
             ],
         },
