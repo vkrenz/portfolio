@@ -7,6 +7,8 @@ import { Button } from 'flowbite-react';
 
 import { BsArrowRight } from 'react-icons/bs'
 import { PiCodeDuotone } from 'react-icons/pi'
+import { FiGithub } from 'react-icons/fi'
+import { BiLinkExternal } from "react-icons/bi";
 
 import { useDarkMode } from '../DarkModeContext';
 import BaffleText from './BaffleText';
@@ -43,14 +45,22 @@ const WorkCard = ({
                                             <span className="text-neutral-400 ms-auto flex md:hidden">
                                                 {project.dateYear}
                                             </span>
-                                            <div className="gap-2 hidden md:flex">
+                                            <div className="gap-2 hidden md:flex items-center">
                                                 <div>&middot;</div>
+                                                <div className="gap-2 flex items-center">
+                                                    <a href={project.githubLink}>Github Repo</a>
+                                                    <FiGithub className="text-xl"/>
+                                                </div>
                                                 {
-                                                    project.headerIcons.map((item, index) => (
-                                                        <a key={index} href={item.link} className="text-2xl">
-                                                            {item.icon}
-                                                        </a>
-                                                    ))
+                                                    project.link && (
+                                                        <>
+                                                            <div>&middot;</div>
+                                                            <div className="gap-2 flex items-center">
+                                                                <a href={project.link}>Live Demo</a>
+                                                                <BiLinkExternal className="text-xl"/>
+                                                            </div>
+                                                        </>
+                                                    )
                                                 }
                                             </div>
                                         </div>
