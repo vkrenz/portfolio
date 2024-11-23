@@ -12,8 +12,8 @@ const NavbarComponent = () => {
 
     // To-be changed (eventually)
     const showBlog = false
-    const showResume = true
-    const showContact = true
+    const showResume = false
+    const showContact = false
 
     console.info(`(NavbarComponent.jsx): Dark Mode: ${isDarkMode}`)
 
