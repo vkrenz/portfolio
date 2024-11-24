@@ -175,7 +175,11 @@ const AboutCard = ({
                         <div className="flex flex-col gap-8">
                             <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl w-full`}>
                                 <div className="flex h-full justify-center items-center gap-8 flex-col my-8">
+
+                                    {/* Profile Image */}
                                     <img src={data.photo} alt="Profile Picture" className="w-60 medium-bg-color p-5 rounded-full" />
+
+                                    {/* About Me Text */}
                                     <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg`}>
                                         Hey, I&apos;m <span className="medium-text-color">Victor</span> 👋
                                     </div>
@@ -185,14 +189,19 @@ const AboutCard = ({
                                     <div className={`md:text-2xl font-bold ${isDarkMode ? 'light-text-color' : 'dark-text-color'} text-lg text-center flex gap-2 flex-wrap items-center justify-center`}>
                                         Enthusiastic about delivering high-quality&nbsp;<span className="underline-medium-color"><BaffleText text="applications" /></span>.
                                     </div>
+
                                 </div>
+
                             </div>
                             <div className="flex gap-8 flex-col lg:flex-row">
                                 <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
+                                        
                                         <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center lg:justify-start text-base`}>
                                             <LiaLinkSolid className="h-5 w-5" />
                                             Socials
                                         </div>
+
+                                        {/* Display Socials */}
                                         <div className="flex flex-col gap-3 h-full md:justify-around w-full">
                                             {newSocials.map((chunk, index) => (
                                                 <div key={index} className="flex gap-3 h-full w-full">
@@ -207,7 +216,10 @@ const AboutCard = ({
                                                 </div>
                                             ))}
                                         </div>
+
                                     </div>
+
+                                    {/* Display Experience */}
                                     <div className={`w-full lg:w-1/2 ${isDarkMode ? 'bg-neutral-600' : 'bg-white'} p-7 rounded-3xl flex flex-col gap-3`}> {/** Right Column */}
                                         <div className={`flex items-center gap-2 ${isDarkMode ? 'text-neutral-200' : 'text-neutral-400'} uppercase font-semibold mb-5 justify-center lg:justify-start text-base`}>
                                             <PiDevicesDuotone className="h-5 w-5" />
@@ -224,6 +236,7 @@ const AboutCard = ({
                                             <a href="/work"><div className="expand-hover transition text-xs sm:text-sm px-3 md:px-4 py-2 rounded-full extra-light-bg-color whitespace-nowrap dark-text-color flex gap-3 leading-4">See more <BsArrowRight className="ml-1 h-4 w-4" /></div></a>
                                         </div>
                                     </div>
+
                             </div>
                         </div>
                     </>
