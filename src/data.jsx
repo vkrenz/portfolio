@@ -8,8 +8,6 @@ import {
     PiGlobeHemisphereWestDuotone,
 } from 'react-icons/pi'
 
-import { GiClothes } from 'react-icons/gi'
-
 import { TbBrandAirbnb, TbBrandVercel } from 'react-icons/tb'
 
 import { FaGithubAlt } from 'react-icons/fa'

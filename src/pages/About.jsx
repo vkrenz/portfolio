@@ -1,9 +1,9 @@
-import AboutCardLarge from "../components/AboutCardLarge";
+import AboutCard from "../components/AboutCard";
 
 const About = () => {
   return (
     <div>
-      <AboutCardLarge />
+      <AboutCard small={false} />
     </div>
   );
 };
