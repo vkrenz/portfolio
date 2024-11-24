@@ -1,42 +1,27 @@
+'use client'
+
+// React Icons Imports
 import { FaGithubAlt } from 'react-icons/fa'
 import { PiHeartDuotone } from 'react-icons/pi'
 import { FiArrowUpRight } from 'react-icons/fi'
 
+// Dark Mode Import
 import { useDarkMode } from '../DarkModeContext'
+
+// Baffle JS Import
 import BaffleText from './BaffleText'
 
 const Footer = () => {
+
+    // Dark Mode State
     const { isDarkMode } = useDarkMode()
 
     return (
         <div className="flex flex-col w-full">
             <div className="flex gap-3 my-14 dark-text-color max-h-[60px]">
                 <div
-                    className={`
-                        ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
-                        expand-hover
-                        cursor-pointer
-                        rounded-2xl
-                        lg:rounded-full
-                        md:flex
-                        hidden
-                        items-center
-                        justify-center
-                        px-6
-                        w-1/5
-                    `}
-                >
-                    <a
-                        href="https://github.com/vkrenz/portfolio-2"
-                        className={`
-                            ${isDarkMode ? 'text-white' : 'dark-text-color'}
-                            flex
-                            gap-3
-                            items-center
-                            text-xs
-                            lg:text-md
-                        `}
-                    >
+                    className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} expand-hover cursor-pointer rounded-2xl lg:rounded-full md:flex hidden items-center justify-center px-6 w-1/5`}>
+                    <a href="https://github.com/vkrenz/portfolio-2" className={`${isDarkMode ? 'text-white' : 'dark-text-color'} flex gap-3 items-center text-xs lg:text-md`}>
                         <FaGithubAlt className="w-5 h-5" />
                         <BaffleText text="Source Code"/>
                     </a>
@@ -53,31 +38,8 @@ const Footer = () => {
                             vkrenzel &copy; 2023-2024
                         </div>
                     </div>
-                    <div
-                        className={`
-                            ${isDarkMode ? 'bg-neutral-600' : 'bg-white'}
-                            expand-hover
-                            cursor-pointer
-                            rounded-2xl
-                            lg:rounded-full
-                            flex
-                            md:hidden
-                            items-center
-                            justify-center
-                            p-6
-                        `}
-                    >
-                        <a
-                            href="https://github.com/vkrenz/portfolio-2"
-                            className={`
-                                ${isDarkMode ? 'text-white' : 'dark-text-color'}
-                                flex
-                                gap-3
-                                items-center
-                                text-xs
-                                lg:text-md
-                            `}
-                        >
+                    <div className={`${isDarkMode ? 'bg-neutral-600' : 'bg-white'} expand-hover cursor-pointer rounded-2xl lg:rounded-full flex md:hidden items-center justify-center p-6`}>
+                        <a href="https://github.com/vkrenz/portfolio-2" className={`${isDarkMode ? 'text-white' : 'dark-text-color'} flex gap-3 items-center text-xs lg:text-md`}>
                             <FaGithubAlt className="w-5 h-5" />
                                 <p>Source Code</p>
                             <FiArrowUpRight className="w-5 h-5" />
