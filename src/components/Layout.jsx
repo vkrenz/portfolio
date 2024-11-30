@@ -20,11 +20,8 @@ const Layout = ({ children }) => {
   }, [isDarkMode])
 
   return (
-    <div className="container mx-auto px-4 lg:px-8 md:px-0 w-full lg:max-w-5xl">
-      <NavbarComponent 
-        // isDarkMode={isDarkMode} 
-        // toggleDarkMode={toggleDarkMode} 
-      />
+    <div className="container mx-auto px-4 lg:px-8 md:px-0 w-full lg:max-w-5xl mb-32 sm:mb-0">
+      <NavbarComponent />
       <main>{children}</main>
       <Footer />
     </div>
