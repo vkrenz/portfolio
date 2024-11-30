@@ -225,7 +225,8 @@ const data = {
         postalCode: "M2R",
         phone: "+1 (647) 568-6382",
         email: "vkrenzel@outlook.com",
-        linkedin: "linkedin.com/in/vkrenz",
+        linkedinHandle: "in/vkrenz",
+        linkedinLink: "https://www.linkedin.com/in/vkrenz/",
         objective: "",
         education: {
             schoolName: "Seneca Polytechnic",

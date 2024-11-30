@@ -1,42 +1,50 @@
+// Import all data
 import data from '../data'
 
 import { useDarkMode } from '../DarkModeContext';
 
 const Resume = () => {
+
+    // Deconstruct data
+    const {
+        resume,
+    } = data
+
     return (
         <div className="mx-auto">
             <div className="text-center mb-10 bg-white rounded-3xl p-10">
-                <h1 className="text-4xl font-semibold">VICTOR KRENZEL</h1>
+
+                {/* First + Last Name */}
+                <h1 className="text-4xl font-semibold">{resume.name.firstName} {resume.name.lastName}</h1>
+
                 {/* Divider */}
                 <hr className="border-t-2 border-gray-300 my-10" />
+
+                {/* All contact info */}
                 <div className="flex justify-center items-center">
-                    <p className="text-lg">Toronto, ON M2R</p>
+                    <p className="text-lg">{resume.location} {resume.postalCode}</p>
                     <p className="mx-2">|</p>
-                    <p>+1 (647) 568-6382</p>
+                    <p>{resume.phone}</p>
                     <p className="mx-2">|</p>
-                    <a href="mail:vkrenzel@outlook.com" className="text-blue-500 underline ms-2">
-                        vkrenzel@outlook.com
+                    <a href={`mail:${resume.email}`} className="text-blue-500 underline ms-2">
+                        {resume.email}
                     </a>
                     <p className="mx-2">|</p>
-                    <a href="https://linkedin.com/in/vkrenz" className="text-blue-500 underline ms-2">
-                        linkedin.com/in/vkrenz
+                    <a href={resume.linkedinLink} className="text-blue-500 underline ms-2">
+                        {resume.linkedinHandle}
                     </a>
                 </div>
+
             </div>
 
             {/* Education Section */}
             <section className="mb-10 p-10 rounded-3xl bg-white">
                 <h2 className="text-2xl font-semibold mb-4 text-center">EDUCATION</h2>
-                    <div className="mb-6 flex items-center justify-between">
-                        <p className="font-semibold">Ontario College Diploma, Computer Programming | <span className="font-regular opacity-50">Seneca College, Toronto ON</span></p>
-                        <p><span className="italic">12/2023</span></p>
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold italic">{resume.education.schoolName}, <span className="font-regular opacity-50 italic">Toronto ON</span></p>
+                        <p><span className="italic">{resume.education.gradMonth} {resume.education.gradYear}</span></p>
                     </div>
-                <div>
-                    <div className=" flex items-center justify-between">
-                        <p className="font-semibold">CyberArts, Ontario High School Diploma | <span className="font-regular opacity-50">Northview Heights Secondary School, Toronto ON</span></p>
-                        <p><span className="italic">06/2017</span></p>
-                    </div>
-                </div>
+                <h2 className="italic">{resume.education.credential} in {resume.education.program}</h2>
             </section>
 
             {/* Technical Skills Section */}
