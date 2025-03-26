@@ -17,7 +17,7 @@ const NavbarComponent = () => {
 
     // To-be changed (eventually)
     const showBlog = false
-    const showResume = true // WIP (11/30/2024)
+    const showResume = false // WIP (11/30/2024)
     const showContact = false
 
     // Active Hue State
